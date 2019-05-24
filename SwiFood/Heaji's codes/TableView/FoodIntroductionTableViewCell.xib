@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="FoodIntroductionTableViewCell" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FoodIntroductionTableViewCell" customModule="SwiFood" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="465" height="166"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="465" height="165.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ApplePie" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGO-ao-GXJ">
+                        <rect key="frame" x="20" y="30" width="445" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="YyX-6s-eB5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="25"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQx-My-mmj">
+                        <rect key="frame" x="20" y="80" width="445" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="vQC-GI-GDP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UZ-Qy-4li">
+                        <rect key="frame" x="25" y="118" width="75" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="WO7-io-WHR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEw-iU-XQQ">
+                        <rect key="frame" x="92" y="125.5" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="3RX-oq-uMW"/>
+                            <constraint firstAttribute="height" constant="20" id="P3Q-hf-Rw0"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="ozb-Zw-0Ze"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="chat"/>
+                        <connections>
+                            <action selector="commentButtonDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Lmi-XG-qkT"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tta-cS-fbj">
+                        <rect key="frame" x="410" y="10" width="30" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="ZsF-9t-CBs"/>
+                            <constraint firstAttribute="width" constant="30" id="vCs-pV-mpZ"/>
+                        </constraints>
+                        <state key="normal" image="tag5"/>
+                        <connections>
+                            <action selector="tagDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YiX-Ww-RcK"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="sQx-My-mmj" secondAttribute="trailing" id="4tV-6D-rSf"/>
+                    <constraint firstAttribute="bottom" secondItem="qEw-iU-XQQ" secondAttribute="bottom" constant="20" id="583-gH-Vsy"/>
+                    <constraint firstItem="sQx-My-mmj" firstAttribute="top" secondItem="FGO-ao-GXJ" secondAttribute="bottom" constant="10" id="As8-NU-qgg"/>
+                    <constraint firstItem="1UZ-Qy-4li" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="KBw-td-bjP"/>
+                    <constraint firstItem="Tta-cS-fbj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="NJz-5z-w8o"/>
+                    <constraint firstItem="qEw-iU-XQQ" firstAttribute="leading" secondItem="1UZ-Qy-4li" secondAttribute="trailing" constant="10" id="XMP-Gc-K7d"/>
+                    <constraint firstAttribute="bottom" secondItem="1UZ-Qy-4li" secondAttribute="bottom" constant="20" id="hvL-Q8-UFF"/>
+                    <constraint firstItem="sQx-My-mmj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="mdY-WM-47V"/>
+                    <constraint firstItem="1UZ-Qy-4li" firstAttribute="top" secondItem="sQx-My-mmj" secondAttribute="bottom" constant="20" id="oel-fc-ngn"/>
+                    <constraint firstItem="FGO-ao-GXJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="rie-Wu-u77"/>
+                    <constraint firstAttribute="trailing" secondItem="Tta-cS-fbj" secondAttribute="trailing" constant="25" id="tCr-sQ-APh"/>
+                    <constraint firstAttribute="trailing" secondItem="FGO-ao-GXJ" secondAttribute="trailing" id="ujo-Q4-h76"/>
+                    <constraint firstItem="FGO-ao-GXJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="xVV-0P-6NV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="commentBtn" destination="qEw-iU-XQQ" id="foL-Iw-gAi"/>
+                <outlet property="commentLabel" destination="1UZ-Qy-4li" id="4fI-YV-89b"/>
+                <outlet property="foodNameLabel" destination="FGO-ao-GXJ" id="SkK-k4-Fqv"/>
+                <outlet property="levelLabel" destination="sQx-My-mmj" id="CCH-Su-CoN"/>
+                <outlet property="tagBtn" destination="Tta-cS-fbj" id="s9E-ed-urq"/>
+            </connections>
+            <point key="canvasLocation" x="-2.1739130434782612" y="85.714285714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chat" width="64" height="64"/>
+        <image name="tag5" width="64" height="64"/>
+    </resources>
+</document>

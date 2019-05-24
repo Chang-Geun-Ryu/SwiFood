@@ -18,12 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="11" translatesAutoresizingMaskIntoConstraints="NO" id="k4N-HM-D7k">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main" translatesAutoresizingMaskIntoConstraints="NO" id="k4N-HM-D7k">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.99193829298019409" green="0.86966409166896486" blue="0.89910443086566405" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="k4N-HM-D7k" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="0ap-ia-GuJ"/>
+                            <constraint firstAttribute="bottom" secondItem="k4N-HM-D7k" secondAttribute="bottom" id="8ed-K5-mRT"/>
+                            <constraint firstItem="k4N-HM-D7k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WMo-rS-yNR"/>
+                            <constraint firstItem="k4N-HM-D7k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mK2-ck-uyN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -33,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="11" width="375" height="812"/>
+        <image name="main" width="564" height="847"/>
     </resources>
 </document>

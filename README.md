@@ -1,2 +1,0 @@
-# SwiFood
-Hackathon PJ

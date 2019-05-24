@@ -2,7 +2,7 @@
 //  HeaderView.swift
 //  SwiFood
 //
-//  Created by CHANGGUEN YU on 21/05/2019.
+//  Created by CHANGGUEN YU on 24/05/2019.
 //  Copyright © 2019 Swifood Team. All rights reserved.
 //
 
@@ -60,19 +60,21 @@ class HeaderView: UICollectionReusableView {
     
     switch swipeGesture.direction {
     case UISwipeGestureRecognizer.Direction.left:
-      if currentImage == images.count - 1 {
+      if currentImage == CollVC.food.list.count - 1 {
         currentImage = 0
       } else {
         currentImage += 1
       }
-      imageView.image = UIImage(named: images[currentImage])
+      guard let image = CollVC.food.images[CollVC.food.list[currentImage].iconImage] as? UIImage else {print("fail header"); return  }
+      imageView.image = image //UIImage(named: images[currentImage])
     case UISwipeGestureRecognizer.Direction.right:
       if currentImage == 0 {
-        currentImage = images.count - 1
+        currentImage = CollVC.food.list.count - 1
       } else {
         currentImage -= 1
       }
-      imageView.image = UIImage(named: images[currentImage])
+      guard let image = CollVC.food.images[CollVC.food.list[currentImage].iconImage] as? UIImage else {print("fail header"); return  }
+      imageView.image = image //UIImage(named: images[currentImage])
     default:
       break
     }

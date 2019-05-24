@@ -7,7 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		42D007E22293C3540099715E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D007E12293C3540099715E /* AppDelegate.swift */; };
+		20EF0D00993B3092B78A84C2 /* Pods_SwiFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5ECA9F7D9971D722330EF2 /* Pods_SwiFood.framework */; };
+		42B47C5F229545BF00F45979 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42B47C5E229545BF00F45979 /* GoogleService-Info.plist */; };
+		42B47C612295496E00F45979 /* FirebaseTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47C602295496E00F45979 /* FirebaseTestVC.swift */; };
+		42B47C632296202800F45979 /* FirebaseOperating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47C622296202800F45979 /* FirebaseOperating.swift */; };
+		42B47C8A229634C600F45979 /* FoodData1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47C89229634C500F45979 /* FoodData1.swift */; };
+		42B47C8F229643E800F45979 /* dataLoadTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47C8E229643E800F45979 /* dataLoadTest.swift */; };
+		42B47C912296CA3F00F45979 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47C902296CA3E00F45979 /* LaunchScreenVC.swift */; };
+		42B47C952296CA6300F45979 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47C922296CA6300F45979 /* DetailViewController.swift */; };
+		42B47C9D2296CD6900F45979 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47C9C2296CD6900F45979 /* AppDelegate.swift */; };
+		42B47CA32297D1EB00F45979 /* InputCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47CA02297D1EB00F45979 /* InputCommentView.swift */; };
+		42B47CA42297D1EB00F45979 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47CA12297D1EB00F45979 /* SplashViewController.swift */; };
+		42B47CA52297D1EB00F45979 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47CA22297D1EB00F45979 /* CommentViewController.swift */; };
+		42B47CB52297D25400F45979 /* FoodMaterialTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47CA72297D25400F45979 /* FoodMaterialTitleTableViewCell.swift */; };
+		42B47CB62297D25400F45979 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47CA82297D25400F45979 /* CommentTableViewCell.swift */; };
+		42B47CB72297D25400F45979 /* FoodIntroductionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B47CA92297D25400F45979 /* FoodIntroductionTableViewCell.xib */; };
+		42B47CB82297D25400F45979 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47CAA2297D25400F45979 /* HeaderTableViewCell.swift */; };
+		42B47CB92297D25400F45979 /* FoodRecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47CAB2297D25400F45979 /* FoodRecipeTableViewCell.swift */; };
+		42B47CBA2297D25400F45979 /* FoodIntroductionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47CAC2297D25400F45979 /* FoodIntroductionTableViewCell.swift */; };
+		42B47CBB2297D25400F45979 /* FoodMaterialTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B47CAD2297D25400F45979 /* FoodMaterialTitleTableViewCell.xib */; };
+		42B47CBC2297D25400F45979 /* FoodSubMaterialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47CAE2297D25400F45979 /* FoodSubMaterialTableViewCell.swift */; };
+		42B47CBD2297D25400F45979 /* FoodImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B47CAF2297D25400F45979 /* FoodImageTableViewCell.xib */; };
+		42B47CBE2297D25400F45979 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B47CB02297D25400F45979 /* CommentTableViewCell.xib */; };
+		42B47CBF2297D25400F45979 /* FoodImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47CB12297D25400F45979 /* FoodImageTableViewCell.swift */; };
+		42B47CC02297D25400F45979 /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B47CB22297D25400F45979 /* HeaderTableViewCell.xib */; };
+		42B47CC12297D25400F45979 /* FoodSubMaterialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B47CB32297D25400F45979 /* FoodSubMaterialTableViewCell.xib */; };
+		42B47CC22297D25400F45979 /* FoodRecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B47CB42297D25400F45979 /* FoodRecipeTableViewCell.xib */; };
+		42B47CC42297D30700F45979 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47CC32297D30700F45979 /* FoodData.swift */; };
 		42D007E72293C3540099715E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42D007E52293C3540099715E /* Main.storyboard */; };
 		42D007E92293C3550099715E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42D007E82293C3550099715E /* Assets.xcassets */; };
 		42D007EC2293C3550099715E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42D007EA2293C3550099715E /* LaunchScreen.storyboard */; };
@@ -15,25 +41,41 @@
 		42D007FC2293FD960099715E /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D007FB2293FD960099715E /* ImageCollectionViewCell.swift */; };
 		42D007FE2293FDC40099715E /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D007FD2293FDC40099715E /* PinterestLayout.swift */; };
 		42D008002293FE050099715E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D007FF2293FE050099715E /* MainVC.swift */; };
-		42D00802229406AF0099715E /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D00801229406AF0099715E /* FoodData.swift */; };
 		42D00805229418F90099715E /* CollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D00804229418F90099715E /* CollVC.swift */; };
 		42D0080722941CD60099715E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0080622941CD60099715E /* HeaderView.swift */; };
 		42D00809229421F60099715E /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D00808229421F60099715E /* Extensions+UIView.swift */; };
 		42D0080B2294269A0099715E /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0080A2294269A0099715E /* StretchyHeaderLayout.swift */; };
-		42D008172295097F0099715E /* FoodImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42D0080F2295097F0099715E /* FoodImageTableViewCell.xib */; };
-		42D008182295097F0099715E /* FoodIntroductionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D008102295097F0099715E /* FoodIntroductionTableViewCell.swift */; };
-		42D008192295097F0099715E /* FoodIntroductionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42D008112295097F0099715E /* FoodIntroductionTableViewCell.xib */; };
-		42D0081A2295097F0099715E /* FoodMaterialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42D008122295097F0099715E /* FoodMaterialTableViewCell.xib */; };
-		42D0081B2295097F0099715E /* FoodMaterialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D008132295097F0099715E /* FoodMaterialTableViewCell.swift */; };
-		42D0081C2295097F0099715E /* FoodRecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42D008142295097F0099715E /* FoodRecipeTableViewCell.xib */; };
-		42D0081D2295097F0099715E /* FoodRecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D008152295097F0099715E /* FoodRecipeTableViewCell.swift */; };
-		42D0081E2295097F0099715E /* FoodImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D008162295097F0099715E /* FoodImageTableViewCell.swift */; };
-		42D00820229509950099715E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0081F229509950099715E /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C5ECA9F7D9971D722330EF2 /* Pods_SwiFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42B47C5E229545BF00F45979 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		42B47C602295496E00F45979 /* FirebaseTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTestVC.swift; sourceTree = "<group>"; };
+		42B47C622296202800F45979 /* FirebaseOperating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseOperating.swift; sourceTree = "<group>"; };
+		42B47C89229634C500F45979 /* FoodData1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodData1.swift; sourceTree = "<group>"; };
+		42B47C8E229643E800F45979 /* dataLoadTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataLoadTest.swift; sourceTree = "<group>"; };
+		42B47C902296CA3E00F45979 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaunchScreenVC.swift; path = "../../../Downloads/SwiFood수정1/LaunchScreenVC.swift"; sourceTree = "<group>"; };
+		42B47C922296CA6300F45979 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		42B47C9C2296CD6900F45979 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		42B47CA02297D1EB00F45979 /* InputCommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputCommentView.swift; path = "../../../../Downloads/SwiFood 6/SwiFood/Heaji's codes/InputCommentView.swift"; sourceTree = "<group>"; };
+		42B47CA12297D1EB00F45979 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = "../../../../Downloads/SwiFood 6/SwiFood/Heaji's codes/SplashViewController.swift"; sourceTree = "<group>"; };
+		42B47CA22297D1EB00F45979 /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentViewController.swift; path = "../../../../Downloads/SwiFood 6/SwiFood/Heaji's codes/CommentViewController.swift"; sourceTree = "<group>"; };
+		42B47CA72297D25400F45979 /* FoodMaterialTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodMaterialTitleTableViewCell.swift; sourceTree = "<group>"; };
+		42B47CA82297D25400F45979 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		42B47CA92297D25400F45979 /* FoodIntroductionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodIntroductionTableViewCell.xib; sourceTree = "<group>"; };
+		42B47CAA2297D25400F45979 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		42B47CAB2297D25400F45979 /* FoodRecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodRecipeTableViewCell.swift; sourceTree = "<group>"; };
+		42B47CAC2297D25400F45979 /* FoodIntroductionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodIntroductionTableViewCell.swift; sourceTree = "<group>"; };
+		42B47CAD2297D25400F45979 /* FoodMaterialTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodMaterialTitleTableViewCell.xib; sourceTree = "<group>"; };
+		42B47CAE2297D25400F45979 /* FoodSubMaterialTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSubMaterialTableViewCell.swift; sourceTree = "<group>"; };
+		42B47CAF2297D25400F45979 /* FoodImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodImageTableViewCell.xib; sourceTree = "<group>"; };
+		42B47CB02297D25400F45979 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		42B47CB12297D25400F45979 /* FoodImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodImageTableViewCell.swift; sourceTree = "<group>"; };
+		42B47CB22297D25400F45979 /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		42B47CB32297D25400F45979 /* FoodSubMaterialTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodSubMaterialTableViewCell.xib; sourceTree = "<group>"; };
+		42B47CB42297D25400F45979 /* FoodRecipeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodRecipeTableViewCell.xib; sourceTree = "<group>"; };
+		42B47CC32297D30700F45979 /* FoodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
 		42D007DE2293C3540099715E /* SwiFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		42D007E12293C3540099715E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42D007E62293C3540099715E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42D007E82293C3550099715E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42D007EB2293C3550099715E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,20 +84,12 @@
 		42D007FB2293FD960099715E /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		42D007FD2293FDC40099715E /* PinterestLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		42D007FF2293FE050099715E /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		42D00801229406AF0099715E /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
 		42D00804229418F90099715E /* CollVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollVC.swift; sourceTree = "<group>"; };
 		42D0080622941CD60099715E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		42D00808229421F60099715E /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Extensions+UIView.swift"; path = "SwiFood/Extensions+UIView.swift"; sourceTree = SOURCE_ROOT; };
 		42D0080A2294269A0099715E /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
-		42D0080F2295097F0099715E /* FoodImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodImageTableViewCell.xib; sourceTree = "<group>"; };
-		42D008102295097F0099715E /* FoodIntroductionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodIntroductionTableViewCell.swift; sourceTree = "<group>"; };
-		42D008112295097F0099715E /* FoodIntroductionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodIntroductionTableViewCell.xib; sourceTree = "<group>"; };
-		42D008122295097F0099715E /* FoodMaterialTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodMaterialTableViewCell.xib; sourceTree = "<group>"; };
-		42D008132295097F0099715E /* FoodMaterialTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodMaterialTableViewCell.swift; sourceTree = "<group>"; };
-		42D008142295097F0099715E /* FoodRecipeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodRecipeTableViewCell.xib; sourceTree = "<group>"; };
-		42D008152295097F0099715E /* FoodRecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodRecipeTableViewCell.swift; sourceTree = "<group>"; };
-		42D008162295097F0099715E /* FoodImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodImageTableViewCell.swift; sourceTree = "<group>"; };
-		42D0081F229509950099715E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6C87F60EFB5CA7D9961D5F26 /* Pods-SwiFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiFood.debug.xcconfig"; path = "Target Support Files/Pods-SwiFood/Pods-SwiFood.debug.xcconfig"; sourceTree = "<group>"; };
+		7BA3ED43897DFE2048F9BF9D /* Pods-SwiFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiFood.release.xcconfig"; path = "Target Support Files/Pods-SwiFood/Pods-SwiFood.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,17 +97,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20EF0D00993B3092B78A84C2 /* Pods_SwiFood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1185BDBF7D48055B34945269 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C87F60EFB5CA7D9961D5F26 /* Pods-SwiFood.debug.xcconfig */,
+				7BA3ED43897DFE2048F9BF9D /* Pods-SwiFood.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		42B47CA62297D22300F45979 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				42B47CA82297D25400F45979 /* CommentTableViewCell.swift */,
+				42B47CB02297D25400F45979 /* CommentTableViewCell.xib */,
+				42B47CB12297D25400F45979 /* FoodImageTableViewCell.swift */,
+				42B47CAF2297D25400F45979 /* FoodImageTableViewCell.xib */,
+				42B47CAC2297D25400F45979 /* FoodIntroductionTableViewCell.swift */,
+				42B47CA92297D25400F45979 /* FoodIntroductionTableViewCell.xib */,
+				42B47CA72297D25400F45979 /* FoodMaterialTitleTableViewCell.swift */,
+				42B47CAD2297D25400F45979 /* FoodMaterialTitleTableViewCell.xib */,
+				42B47CAB2297D25400F45979 /* FoodRecipeTableViewCell.swift */,
+				42B47CB42297D25400F45979 /* FoodRecipeTableViewCell.xib */,
+				42B47CAE2297D25400F45979 /* FoodSubMaterialTableViewCell.swift */,
+				42B47CB32297D25400F45979 /* FoodSubMaterialTableViewCell.xib */,
+				42B47CAA2297D25400F45979 /* HeaderTableViewCell.swift */,
+				42B47CB22297D25400F45979 /* HeaderTableViewCell.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		42D007D52293C3540099715E = {
 			isa = PBXGroup;
 			children = (
 				42D007E02293C3540099715E /* SwiFood */,
 				42D007DF2293C3540099715E /* Products */,
+				1185BDBF7D48055B34945269 /* Pods */,
+				AFAFB9975A7265967BE15865 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,11 +158,14 @@
 				42D0080D229509270099715E /* Heaji's codes */,
 				42D0080C2294E8880099715E /* nouse */,
 				42D00803229418CB0099715E /* Ryu's codes */,
-				42D007E12293C3540099715E /* AppDelegate.swift */,
-				42D00801229406AF0099715E /* FoodData.swift */,
+				42B47C9C2296CD6900F45979 /* AppDelegate.swift */,
+				42B47C89229634C500F45979 /* FoodData1.swift */,
+				42B47CC32297D30700F45979 /* FoodData.swift */,
 				42D007E82293C3550099715E /* Assets.xcassets */,
+				42B47C902296CA3E00F45979 /* LaunchScreenVC.swift */,
 				42D007ED2293C3550099715E /* Info.plist */,
 				42D007EA2293C3550099715E /* LaunchScreen.storyboard */,
+				42B47C5E229545BF00F45979 /* GoogleService-Info.plist */,
 			);
 			path = SwiFood;
 			sourceTree = "<group>";
@@ -108,6 +178,8 @@
 				42D00808229421F60099715E /* Extensions+UIView.swift */,
 				42D0080622941CD60099715E /* HeaderView.swift */,
 				42D0080A2294269A0099715E /* StretchyHeaderLayout.swift */,
+				42B47C602295496E00F45979 /* FirebaseTestVC.swift */,
+				42B47C622296202800F45979 /* FirebaseOperating.swift */,
 			);
 			path = "Ryu's codes";
 			sourceTree = "<group>";
@@ -117,6 +189,7 @@
 			children = (
 				42D007F92293EA930099715E /* ViewController.swift */,
 				42D007FF2293FE050099715E /* MainVC.swift */,
+				42B47C8E229643E800F45979 /* dataLoadTest.swift */,
 				42D007FD2293FDC40099715E /* PinterestLayout.swift */,
 				42D007E52293C3540099715E /* Main.storyboard */,
 			);
@@ -126,25 +199,21 @@
 		42D0080D229509270099715E /* Heaji's codes */ = {
 			isa = PBXGroup;
 			children = (
-				42D0081F229509950099715E /* DetailViewController.swift */,
-				42D0080E229509650099715E /* TableViewCell */,
+				42B47CA62297D22300F45979 /* TableView */,
+				42B47C922296CA6300F45979 /* DetailViewController.swift */,
+				42B47CA22297D1EB00F45979 /* CommentViewController.swift */,
+				42B47CA02297D1EB00F45979 /* InputCommentView.swift */,
+				42B47CA12297D1EB00F45979 /* SplashViewController.swift */,
 			);
 			path = "Heaji's codes";
 			sourceTree = "<group>";
 		};
-		42D0080E229509650099715E /* TableViewCell */ = {
+		AFAFB9975A7265967BE15865 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				42D008162295097F0099715E /* FoodImageTableViewCell.swift */,
-				42D0080F2295097F0099715E /* FoodImageTableViewCell.xib */,
-				42D008102295097F0099715E /* FoodIntroductionTableViewCell.swift */,
-				42D008112295097F0099715E /* FoodIntroductionTableViewCell.xib */,
-				42D008132295097F0099715E /* FoodMaterialTableViewCell.swift */,
-				42D008122295097F0099715E /* FoodMaterialTableViewCell.xib */,
-				42D008152295097F0099715E /* FoodRecipeTableViewCell.swift */,
-				42D008142295097F0099715E /* FoodRecipeTableViewCell.xib */,
+				2C5ECA9F7D9971D722330EF2 /* Pods_SwiFood.framework */,
 			);
-			path = TableViewCell;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42D007F02293C3550099715E /* Build configuration list for PBXNativeTarget "SwiFood" */;
 			buildPhases = (
+				E155BD288FAB5786AD04038E /* [CP] Check Pods Manifest.lock */,
 				42D007DA2293C3540099715E /* Sources */,
 				42D007DB2293C3540099715E /* Frameworks */,
 				42D007DC2293C3540099715E /* Resources */,
+				F727D78D55FF4C39E27B09D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,17 +276,74 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42D008192295097F0099715E /* FoodIntroductionTableViewCell.xib in Resources */,
-				42D0081C2295097F0099715E /* FoodRecipeTableViewCell.xib in Resources */,
+				42B47CB72297D25400F45979 /* FoodIntroductionTableViewCell.xib in Resources */,
+				42B47CC02297D25400F45979 /* HeaderTableViewCell.xib in Resources */,
+				42B47C5F229545BF00F45979 /* GoogleService-Info.plist in Resources */,
 				42D007EC2293C3550099715E /* LaunchScreen.storyboard in Resources */,
-				42D008172295097F0099715E /* FoodImageTableViewCell.xib in Resources */,
+				42B47CBB2297D25400F45979 /* FoodMaterialTitleTableViewCell.xib in Resources */,
 				42D007E92293C3550099715E /* Assets.xcassets in Resources */,
-				42D0081A2295097F0099715E /* FoodMaterialTableViewCell.xib in Resources */,
+				42B47CC12297D25400F45979 /* FoodSubMaterialTableViewCell.xib in Resources */,
+				42B47CBD2297D25400F45979 /* FoodImageTableViewCell.xib in Resources */,
 				42D007E72293C3540099715E /* Main.storyboard in Resources */,
+				42B47CBE2297D25400F45979 /* CommentTableViewCell.xib in Resources */,
+				42B47CC22297D25400F45979 /* FoodRecipeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E155BD288FAB5786AD04038E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiFood-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F727D78D55FF4C39E27B09D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiFood/Pods-SwiFood-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiFood/Pods-SwiFood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		42D007DA2293C3540099715E /* Sources */ = {
@@ -223,20 +351,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				42D007FE2293FDC40099715E /* PinterestLayout.swift in Sources */,
-				42D00802229406AF0099715E /* FoodData.swift in Sources */,
+				42B47C9D2296CD6900F45979 /* AppDelegate.swift in Sources */,
+				42B47C952296CA6300F45979 /* DetailViewController.swift in Sources */,
+				42B47CBA2297D25400F45979 /* FoodIntroductionTableViewCell.swift in Sources */,
+				42B47CB52297D25400F45979 /* FoodMaterialTitleTableViewCell.swift in Sources */,
+				42B47CBF2297D25400F45979 /* FoodImageTableViewCell.swift in Sources */,
+				42B47CB62297D25400F45979 /* CommentTableViewCell.swift in Sources */,
+				42B47CA42297D1EB00F45979 /* SplashViewController.swift in Sources */,
+				42B47C632296202800F45979 /* FirebaseOperating.swift in Sources */,
+				42B47C8F229643E800F45979 /* dataLoadTest.swift in Sources */,
+				42B47CA32297D1EB00F45979 /* InputCommentView.swift in Sources */,
 				42D00809229421F60099715E /* Extensions+UIView.swift in Sources */,
+				42B47CC42297D30700F45979 /* FoodData.swift in Sources */,
 				42D008002293FE050099715E /* MainVC.swift in Sources */,
-				42D0081B2295097F0099715E /* FoodMaterialTableViewCell.swift in Sources */,
+				42B47CB92297D25400F45979 /* FoodRecipeTableViewCell.swift in Sources */,
 				42D007FC2293FD960099715E /* ImageCollectionViewCell.swift in Sources */,
+				42B47C912296CA3F00F45979 /* LaunchScreenVC.swift in Sources */,
+				42B47C8A229634C600F45979 /* FoodData1.swift in Sources */,
 				42D007FA2293EA930099715E /* ViewController.swift in Sources */,
 				42D00805229418F90099715E /* CollVC.swift in Sources */,
-				42D007E22293C3540099715E /* AppDelegate.swift in Sources */,
-				42D0081E2295097F0099715E /* FoodImageTableViewCell.swift in Sources */,
-				42D008182295097F0099715E /* FoodIntroductionTableViewCell.swift in Sources */,
-				42D0081D2295097F0099715E /* FoodRecipeTableViewCell.swift in Sources */,
-				42D00820229509950099715E /* DetailViewController.swift in Sources */,
+				42B47CB82297D25400F45979 /* HeaderTableViewCell.swift in Sources */,
+				42B47CBC2297D25400F45979 /* FoodSubMaterialTableViewCell.swift in Sources */,
+				42B47C612295496E00F45979 /* FirebaseTestVC.swift in Sources */,
 				42D0080B2294269A0099715E /* StretchyHeaderLayout.swift in Sources */,
 				42D0080722941CD60099715E /* HeaderView.swift in Sources */,
+				42B47CA52297D1EB00F45979 /* CommentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +519,7 @@
 		};
 		42D007F12293C3550099715E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C87F60EFB5CA7D9961D5F26 /* Pods-SwiFood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -389,7 +529,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.SwiFood;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.goodycg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -398,6 +538,7 @@
 		};
 		42D007F22293C3550099715E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BA3ED43897DFE2048F9BF9D /* Pods-SwiFood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -407,7 +548,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.SwiFood;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.goodycg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

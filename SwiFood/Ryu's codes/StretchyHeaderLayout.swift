@@ -2,7 +2,7 @@
 //  StretchyHeaderLayout.swift
 //  SwiFood
 //
-//  Created by CHANGGUEN YU on 21/05/2019.
+//  Created by CHANGGUEN YU on 24/05/2019.
 //  Copyright © 2019 Swifood Team. All rights reserved.
 //
 
@@ -21,7 +21,7 @@ class StretchyHeaderLayout: UICollectionViewFlowLayout {
         guard let collectionView = collectionView else { return }
         
         let contentOffsetY = collectionView.contentOffset.y
-        print(contentOffsetY)
+        //print(contentOffsetY)
         
         if contentOffsetY > 0 {
           return

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="FoodRecipeTableViewCell" selectionStyle="default" indentationWidth="10" rowHeight="156" id="KGk-i7-Jjw" customClass="FoodRecipeTableViewCell" customModule="SwiFood" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="344" height="156"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="344" height="155.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjj-6F-daq">
+                        <rect key="frame" x="20" y="10" width="304" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="SRM-vU-tRw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Pjj-6F-daq" secondAttribute="trailing" constant="20" id="30z-L0-Rdy"/>
+                    <constraint firstItem="Pjj-6F-daq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="7n4-Dv-l9X"/>
+                    <constraint firstItem="Pjj-6F-daq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="CEL-6h-fan"/>
+                    <constraint firstAttribute="bottom" secondItem="Pjj-6F-daq" secondAttribute="bottom" constant="10" id="JEv-bg-DKm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="recipeLabel" destination="Pjj-6F-daq" id="oHh-xl-6IX"/>
+            </connections>
+            <point key="canvasLocation" x="111.59420289855073" y="83.705357142857139"/>
+        </tableViewCell>
+    </objects>
+</document>

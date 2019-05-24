@@ -2,14 +2,14 @@
 //  ImageCollectionViewCell.swift
 //  TestPinterest
 //
-//  Created by Kira on 21/05/2019.
+//  Created by Kira on 24/05/2019.
 //  Copyright © 2019 Kira. All rights reserved.
 //
 
 import UIKit
 
 class ImageCollectionViewCell: UICollectionViewCell {
-  
+  var imageName = ""
   let imageView = UIImageView()
   let mainLabel = UILabel()
   let sensitivityLabel = UILabel()
@@ -26,6 +26,8 @@ class ImageCollectionViewCell: UICollectionViewCell {
   }
   
   private func configuer() {
+//    imageView.image = FireBaseOperating.Share.downloadImage(name: imageName)
+    
     imageView.contentMode = .scaleAspectFill
     imageView.clipsToBounds = true
     imageView.layer.cornerRadius = 10
@@ -42,7 +44,6 @@ class ImageCollectionViewCell: UICollectionViewCell {
     anotherInfo.text = "text"
     anotherInfo.font = UIFont.systemFont(ofSize: 15, weight: .ultraLight)
     contentView.addSubview(anotherInfo)
-    
   }
   
   private func autolayout() {
@@ -70,6 +71,4 @@ class ImageCollectionViewCell: UICollectionViewCell {
     anotherInfo.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0).isActive = true
     anotherInfo.heightAnchor.constraint(equalToConstant: 15).isActive = true
   }
-  
-  
 }
