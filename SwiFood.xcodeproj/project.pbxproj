@@ -34,6 +34,7 @@
 		42B47CC12297D25400F45979 /* FoodSubMaterialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B47CB32297D25400F45979 /* FoodSubMaterialTableViewCell.xib */; };
 		42B47CC22297D25400F45979 /* FoodRecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B47CB42297D25400F45979 /* FoodRecipeTableViewCell.xib */; };
 		42B47CC42297D30700F45979 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47CC32297D30700F45979 /* FoodData.swift */; };
+		42BBF3DF229941DD0096E144 /* FireStoreTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBF3DE229941DD0096E144 /* FireStoreTestVC.swift */; };
 		42D007E72293C3540099715E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42D007E52293C3540099715E /* Main.storyboard */; };
 		42D007E92293C3550099715E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42D007E82293C3550099715E /* Assets.xcassets */; };
 		42D007EC2293C3550099715E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42D007EA2293C3550099715E /* LaunchScreen.storyboard */; };
@@ -75,6 +76,7 @@
 		42B47CB32297D25400F45979 /* FoodSubMaterialTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodSubMaterialTableViewCell.xib; sourceTree = "<group>"; };
 		42B47CB42297D25400F45979 /* FoodRecipeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodRecipeTableViewCell.xib; sourceTree = "<group>"; };
 		42B47CC32297D30700F45979 /* FoodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
+		42BBF3DE229941DD0096E144 /* FireStoreTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreTestVC.swift; sourceTree = "<group>"; };
 		42D007DE2293C3540099715E /* SwiFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42D007E62293C3540099715E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42D007E82293C3550099715E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				42D0080A2294269A0099715E /* StretchyHeaderLayout.swift */,
 				42B47C602295496E00F45979 /* FirebaseTestVC.swift */,
 				42B47C622296202800F45979 /* FirebaseOperating.swift */,
+				42BBF3DE229941DD0096E144 /* FireStoreTestVC.swift */,
 			);
 			path = "Ryu's codes";
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				42D007FC2293FD960099715E /* ImageCollectionViewCell.swift in Sources */,
 				42B47C912296CA3F00F45979 /* LaunchScreenVC.swift in Sources */,
 				42B47C8A229634C600F45979 /* FoodData1.swift in Sources */,
+				42BBF3DF229941DD0096E144 /* FireStoreTestVC.swift in Sources */,
 				42D007FA2293EA930099715E /* ViewController.swift in Sources */,
 				42D00805229418F90099715E /* CollVC.swift in Sources */,
 				42B47CB82297D25400F45979 /* HeaderTableViewCell.swift in Sources */,
