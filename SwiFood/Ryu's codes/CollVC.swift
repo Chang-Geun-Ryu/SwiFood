@@ -131,23 +131,19 @@ class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
       switch index {
       case 0:
         moveTop = tempButton.topAnchor.constraint(equalTo: baseButton.topAnchor, constant: 30)
-        moveTop?.priority = .defaultLow
-        moveTop?.isActive = true
       case 1:
         moveTop = tempButton.topAnchor.constraint(equalTo: baseButton.topAnchor, constant: 60)
-        moveTop?.priority = .defaultLow
-        moveTop?.isActive = true
       case 2:
         moveTop = tempButton.topAnchor.constraint(equalTo: baseButton.topAnchor, constant: 90)
-        moveTop?.priority = .defaultLow
-        moveTop?.isActive = true
       default: break
       }
+        moveTop?.priority = .defaultLow
+        moveTop?.isActive = true
       dropButtons.append(tempButton)
       dropMoveConstraint.append(moveTop)
     }
   }
-  
+  // tag맞게 데이터를 정렬, reloaddata를 해줘야함
   @objc private func dropButtonAction(_ sender: UIButton) {
     switch sender.tag {
     case 0:
