@@ -9,7 +9,7 @@
 import UIKit
 
 class CommentViewController: UIViewController {
-    // HJ
+    // HJ Moomin
     var foodData: FoodData?
     
     var tableView: UITableView = {
