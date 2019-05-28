@@ -30,12 +30,7 @@ final class FireBaseOperating {
   }
   
   func writeFoodList(food: Food) {
-//    ref?.child("Foods").observe(, with: { (metadata) in
-//     self.ref.child("Foods/\(self.itemCount)/").set
-//      self.ref.child("Foods/\(self.itemCount)/title").setValue(food.title)
-//    ref?.child("Foods").child("\(itemCount)").updateChildValues(["title": food.title])
     ref?.child("Foods").child("\(itemCount)").updateChildValues(["title": food.title])
-    ref?.keepSynced(true)
     ref?.child("Foods").child("\(itemCount)").updateChildValues(["Comment": food.comment])
     let meta = [food.foodMeterial[0].0, food.foodMeterial[0].1]
     print("foodMeterial: \(meta)")
@@ -47,40 +42,19 @@ final class FireBaseOperating {
     ref?.child("Foods").child("\(itemCount)").updateChildValues(["meterialImage": food.meterialImages])
     ref?.child("Foods").child("\(itemCount)").updateChildValues(["recipe": food.recipe])
     ref?.child("Foods").child("\(itemCount)").updateChildValues(["sensitivity": food.sensitivity])
+      
+    if let image = CollVC.food.images[food.iconImage] as? UIImage {
+      self.uploadImage(image: image, name: food.iconImage)
+    }
+    if let image = CollVC.food.images[food.foodMeterial[0].0] as? UIImage {
+      self.uploadImage(image: image, name: food.foodMeterial[0].0)
+    }
+    if let image = CollVC.food.images[food.foodMeterial[0].1] as? UIImage {
+      self.uploadImage(image: image, name: food.foodMeterial[0].1)
+    }
     
-//    self.ref.child("Foods/\(self.itemCount)/title") //.setValue(food.title)
-//      self.ref.child("Foods/\(self.itemCount)/Comment").setValue(food.comment)
-//      self.ref.child("Foods/\(self.itemCount)/foodMeterial").setValue(food.foodMeterial)
-//      self.ref.child("Foods/\(self.itemCount)/iconImage").setValue(food.iconImage)
-//      self.ref.child("Foods/\(self.itemCount)/info").setValue(food.info)
-//      self.ref.child("Foods/\(self.itemCount)/level").setValue(food.level)
-//      self.ref.child("Foods/\(self.itemCount)/meterialImage").setValue(food.meterialImages)
-//      self.ref.child("Foods/\(self.itemCount)/recipe").setValue(food.recipe)
-//      self.ref.child("Foods/\(self.itemCount)/sensitivity").setValue(food.sensitivity)
-      
-//      metadata.setValue(food.title, forKeyPath: "\(self.itemCount)/title")
-//      metadata.setValue(food.comment, forKeyPath: "\(self.itemCount)/Comment")
-//      metadata.setValue(food.foodMeterial, forKeyPath: "\(self.itemCount)/foodMeterial")
-//      metadata.setValue(food.iconImage, forKeyPath: "\(self.itemCount)/iconImage")
-//      metadata.setValue(food.info, forKeyPath: "\(self.itemCount)/info")
-//      metadata.setValue(food.level, forKeyPath: "\(self.itemCount)/level")
-//      metadata.setValue(food.meterialImages, forKeyPath: "\(self.itemCount)/meterialImage")
-//      metadata.setValue(food.recipe, forKeyPath: "\(self.itemCount)/recipe")
-//      metadata.setValue(food.sensitivity, forKeyPath: "\(self.itemCount)/sensitivity")
-      
-      if let image = CollVC.food.images[food.iconImage] as? UIImage {
-        self.uploadImage(image: image, name: food.iconImage)
-      }
-      if let image = CollVC.food.images[food.foodMeterial[0].0] as? UIImage {
-        self.uploadImage(image: image, name: food.foodMeterial[0].0)
-      }
-      if let image = CollVC.food.images[food.foodMeterial[0].1] as? UIImage {
-        self.uploadImage(image: image, name: food.foodMeterial[0].1)
-      }
-      
-      NotificationCenter.default.post(name: .reload, object: nil)
-      self.itemCounting()
- //   })
+    NotificationCenter.default.post(name: .reload, object: nil)
+    self.itemCounting()
   }
   
   func readFoodList() {
