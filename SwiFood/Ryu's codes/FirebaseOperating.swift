@@ -38,6 +38,7 @@ final class FireBaseOperating {
     ref?.keepSynced(true)
     ref?.child("Foods").child("\(itemCount)").updateChildValues(["Comment": food.comment])
     let meta = [food.foodMeterial[0].0, food.foodMeterial[0].1]
+    print("foodMeterial: \(meta)")
     ref?.child("Foods").child("\(itemCount)").updateChildValues(["foodMeterial": meta])
     
     ref?.child("Foods").child("\(itemCount)").updateChildValues(["iconImage": food.iconImage])
@@ -70,10 +71,10 @@ final class FireBaseOperating {
       if let image = CollVC.food.images[food.iconImage] as? UIImage {
         self.uploadImage(image: image, name: food.iconImage)
       }
-      if let image = CollVC.food.images[food.iconImage] as? UIImage {
+      if let image = CollVC.food.images[food.foodMeterial[0].0] as? UIImage {
         self.uploadImage(image: image, name: food.foodMeterial[0].0)
       }
-      if let image = CollVC.food.images[food.iconImage] as? UIImage {
+      if let image = CollVC.food.images[food.foodMeterial[0].1] as? UIImage {
         self.uploadImage(image: image, name: food.foodMeterial[0].1)
       }
       
@@ -174,16 +175,17 @@ final class FireBaseOperating {
   
   func uploadImage(image: UIImage, name: String) {
     
-    guard let resingImage = resize(image: image, scale: 0.1) else { return print("resize") }
-    guard let data = resingImage.pngData() else { return print("dd")}
+    guard let resingImage = resize(image: image, scale: 0.1) else { return print("\n\n resize!!!!!!!!!!!") }
+    guard let data = resingImage.pngData() else { return print("png data convert fail")}
     //let imageName = "\(Int(NSDate.timeIntervalSinceReferenceDate * 1000)).jpg"
     
     let riversRef = Storage.storage().reference().child("swifood").child(name)
+    print("\nimage upload: ", name)
     
     riversRef.putData(data, metadata: nil) { (metadata, error) in
       guard let metadata = metadata else {
         // Uh-oh, an error occurred!
-        print("error")
+        print("image upload error")
         return
       }
       
