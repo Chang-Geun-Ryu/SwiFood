@@ -259,6 +259,7 @@ class FirebaseTestVC: UIViewController {
   }
   
   @objc func uploadData(_ sender: UIButton) {
+    
     let foodmeta:[(String,String)] = [(foodMeterialLeftOneTF.text ?? "",foodMeterialRightOneTF.text ?? ""),
                     (foodMeterialLeftTwoTF.text ?? "", foodMeterialRightTwoTF.text ?? ""),
                     (foodMeterialLeftThreeTF.text ?? "", foodMeterialRightThreeTF.text ?? "")]
@@ -271,6 +272,8 @@ class FirebaseTestVC: UIViewController {
     
     let food = Food(iconImage: iconImageName, title: titleTextField.text ?? "title", level: "★★★☆☆", comment: [""], foodMeterial: foodmeta, meterialImages: [metaFirstName, metaSecondName], recipe: recipe, sensitivity: "아주 맛있엉~", info: "존맛")
     
+    guard food.checkFoodData() else {return print("food recipe is unstable")}
+    
     CollVC.food.list.append(food)
     CollVC.food.images.updateValue(iconImage, forKey: iconImageName)
     CollVC.food.images.updateValue(metaImageFirst, forKey: metaFirstName)
@@ -279,9 +282,34 @@ class FirebaseTestVC: UIViewController {
     FireBaseOperating.Share.writeFoodList(food: food)
     
     // TODO: firebase upload
-    
-    
     NotificationCenter.default.post(name: .reload, object: nil)
+  }
+  
+  func showAlert(success: Bool) {
+    let alertController = UIAlertController(title: success ? "저장" : "저장 실패", message: success ? "food recipe가 저장 되었습니다" : "food recipe의 정보가 누락 되었습니다.", preferredStyle: .alert)
+    
+    let okAction = UIAlertAction(title: "확인", style: success ? .default : .cancel) { [weak self] (_) in
+      guard let `self` = self else { return print("self 가 없어!!!")}
+      if success {
+        self.uploadLoadingAnimation()
+        self.dataClear()
+      } else {
+        // TODO : upalod fail todo
+        
+      }
+    }
+    
+    alertController.addAction(okAction)
+    
+    present(alertController, animated: true)
+  }
+  
+  func uploadLoadingAnimation() {
+    
+  }
+  
+  func dataClear() {
+    
   }
   
   @objc func getImage(_ sender: UIButton) {
@@ -345,10 +373,9 @@ class FirebaseTestVC: UIViewController {
     let islandRef = storageRef.child("ios_images/580222007662.jpg")
     
     // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-    islandRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+    islandRef.getData(maxSize: 10 * 1024 * 1024) { data, error in
       if let error = error {
         // Uh-oh, an error occurred!
-        print("aaaaaa")
       } else {
         // Data for "images/island.jpg" is returned
         self.imageView.image = UIImage(data: data!)
@@ -371,17 +398,6 @@ class FirebaseTestVC: UIViewController {
     alert.addAction(album)
     
     present(alert, animated: true)
-  }
-  
-  func resize(image: UIImage, scale: CGFloat) -> UIImage? {
-    let transform = CGAffineTransform(scaleX: scale, y: scale)
-    let size = image.size.applying(transform)
-    UIGraphicsBeginImageContext(size)
-    image.draw(in: CGRect(origin: .zero, size: size))
-    let resultImage = UIGraphicsGetImageFromCurrentImageContext()
-    UIGraphicsEndImageContext()
-    
-    return resultImage
   }
   
   
@@ -411,7 +427,8 @@ class FirebaseTestVC: UIViewController {
 extension FirebaseTestVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     guard let image = info[.originalImage] as? UIImage else { return }
-    guard let resingImage = resize(image: image, scale: 0.2) else { return print("resize")}
+    guard let resingData = image.jpegData(compressionQuality: 0.3) else { return print("resize") }
+    guard let resingImage = UIImage(data: resingData) else { return }
     let imageName = "\(Int(NSDate.timeIntervalSinceReferenceDate * 1000))"
     
     switch selectButton {

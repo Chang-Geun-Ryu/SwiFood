@@ -170,6 +170,29 @@ struct Food{
     self.recipe = recipe
     self.sensitivity = sensi
     self.info = info
+  }
+  
+  func getFoodMeterial() -> [String] {
+    var foodArray: [String] = []
     
+    for (meterial, quantity) in foodMeterial {
+      foodArray.append(meterial)
+      foodArray.append(quantity)
+    }
+    
+    return foodArray
+  }
+  
+  func checkFoodData() -> Bool {
+    guard iconImage.isEmpty == false else { print("iconImage is Empty"); return false }
+    guard title.isEmpty == false else { print("title is Empty"); return false }
+    guard level.isEmpty == false else { print("level is Empty"); return false }
+   // guard comment. == false else { print("comme")} // comment는 비워져 있어도 됨~
+    guard foodMeterial.count > 0 else { print("food Meterial is Empty"); return false }
+    guard recipe.count > 0 else { print("recipe is Empty"); return false }
+    guard sensitivity.isEmpty == false else { print("sensitivity is Empty"); return false }
+    guard info.isEmpty == false else { print("info is Empty"); return false }
+    
+    return true
   }
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		20EF0D00993B3092B78A84C2 /* Pods_SwiFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5ECA9F7D9971D722330EF2 /* Pods_SwiFood.framework */; };
+		42081B8E229F6ED400D4C071 /* CollectionScrollHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42081B8D229F6ED400D4C071 /* CollectionScrollHeaderView.swift */; };
+		42081BD022A3876200D4C071 /* UploadAnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42081BCF22A3876200D4C071 /* UploadAnimationVC.swift */; };
 		42B47C5F229545BF00F45979 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42B47C5E229545BF00F45979 /* GoogleService-Info.plist */; };
 		42B47C612295496E00F45979 /* FirebaseTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47C602295496E00F45979 /* FirebaseTestVC.swift */; };
 		42B47C632296202800F45979 /* FirebaseOperating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47C622296202800F45979 /* FirebaseOperating.swift */; };
@@ -38,7 +40,7 @@
 		42D007FE2293FDC40099715E /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D007FD2293FDC40099715E /* PinterestLayout.swift */; };
 		42D008002293FE050099715E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D007FF2293FE050099715E /* MainVC.swift */; };
 		42D00805229418F90099715E /* CollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D00804229418F90099715E /* CollVC.swift */; };
-		42D0080722941CD60099715E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0080622941CD60099715E /* HeaderView.swift */; };
+		42D0080722941CD60099715E /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0080622941CD60099715E /* CollectionHeaderView.swift */; };
 		42D00809229421F60099715E /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D00808229421F60099715E /* Extensions+UIView.swift */; };
 		42D0080B2294269A0099715E /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0080A2294269A0099715E /* StretchyHeaderLayout.swift */; };
 		C117AF4F229BE0AD004FC486 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C117AF4E229BE0AD004FC486 /* SplashViewController.swift */; };
@@ -48,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		2C5ECA9F7D9971D722330EF2 /* Pods_SwiFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42081B8D229F6ED400D4C071 /* CollectionScrollHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionScrollHeaderView.swift; sourceTree = "<group>"; };
+		42081BCF22A3876200D4C071 /* UploadAnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadAnimationVC.swift; sourceTree = "<group>"; };
 		42B47C5E229545BF00F45979 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		42B47C602295496E00F45979 /* FirebaseTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTestVC.swift; sourceTree = "<group>"; };
 		42B47C622296202800F45979 /* FirebaseOperating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseOperating.swift; sourceTree = "<group>"; };
@@ -80,7 +84,7 @@
 		42D007FD2293FDC40099715E /* PinterestLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		42D007FF2293FE050099715E /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		42D00804229418F90099715E /* CollVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollVC.swift; sourceTree = "<group>"; };
-		42D0080622941CD60099715E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		42D0080622941CD60099715E /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		42D00808229421F60099715E /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Extensions+UIView.swift"; path = "SwiFood/Extensions+UIView.swift"; sourceTree = SOURCE_ROOT; };
 		42D0080A2294269A0099715E /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
 		6C87F60EFB5CA7D9961D5F26 /* Pods-SwiFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiFood.debug.xcconfig"; path = "Target Support Files/Pods-SwiFood/Pods-SwiFood.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,12 +175,14 @@
 			children = (
 				42D00804229418F90099715E /* CollVC.swift */,
 				42D007FB2293FD960099715E /* ImageCollectionViewCell.swift */,
+				42D0080622941CD60099715E /* CollectionHeaderView.swift */,
+				42081B8D229F6ED400D4C071 /* CollectionScrollHeaderView.swift */,
 				42D00808229421F60099715E /* Extensions+UIView.swift */,
-				42D0080622941CD60099715E /* HeaderView.swift */,
 				42D0080A2294269A0099715E /* StretchyHeaderLayout.swift */,
 				42B47C602295496E00F45979 /* FirebaseTestVC.swift */,
 				42B47C622296202800F45979 /* FirebaseOperating.swift */,
 				42BBF3DE229941DD0096E144 /* FireStoreTestVC.swift */,
+				42081BCF22A3876200D4C071 /* UploadAnimationVC.swift */,
 			);
 			path = "Ryu's codes";
 			sourceTree = "<group>";
@@ -351,6 +357,7 @@
 				42B47C9D2296CD6900F45979 /* AppDelegate.swift in Sources */,
 				42B47C952296CA6300F45979 /* DetailViewController.swift in Sources */,
 				42B47CBA2297D25400F45979 /* FoodIntroductionTableViewCell.swift in Sources */,
+				42081B8E229F6ED400D4C071 /* CollectionScrollHeaderView.swift in Sources */,
 				42B47CB52297D25400F45979 /* FoodMaterialTitleTableViewCell.swift in Sources */,
 				42B47CBF2297D25400F45979 /* FoodImageTableViewCell.swift in Sources */,
 				42B47CB62297D25400F45979 /* CommentTableViewCell.swift in Sources */,
@@ -358,6 +365,7 @@
 				42B47C8F229643E800F45979 /* dataLoadTest.swift in Sources */,
 				42D00809229421F60099715E /* Extensions+UIView.swift in Sources */,
 				C1757A5C229D4E6400A20869 /* CommentViewController.swift in Sources */,
+				42081BD022A3876200D4C071 /* UploadAnimationVC.swift in Sources */,
 				42B47CC42297D30700F45979 /* FoodData.swift in Sources */,
 				42D008002293FE050099715E /* MainVC.swift in Sources */,
 				42B47CB92297D25400F45979 /* FoodRecipeTableViewCell.swift in Sources */,
@@ -371,7 +379,7 @@
 				C117AF4F229BE0AD004FC486 /* SplashViewController.swift in Sources */,
 				42B47C612295496E00F45979 /* FirebaseTestVC.swift in Sources */,
 				42D0080B2294269A0099715E /* StretchyHeaderLayout.swift in Sources */,
-				42D0080722941CD60099715E /* HeaderView.swift in Sources */,
+				42D0080722941CD60099715E /* CollectionHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

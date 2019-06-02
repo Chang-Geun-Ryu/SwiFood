@@ -46,8 +46,6 @@ class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     naviSet() // by HJ
     
-    makeFoodList()
-    
     setupCollectionViewLayout()
     
     setupCollectionView()
@@ -127,7 +125,6 @@ class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
       defaultTop.priority = UILayoutPriority(500)
       defaultTop.isActive = true
       
-      
       switch index {
       case 0:
         moveTop = tempButton.topAnchor.constraint(equalTo: baseButton.topAnchor, constant: 30)
@@ -137,8 +134,9 @@ class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
         moveTop = tempButton.topAnchor.constraint(equalTo: baseButton.topAnchor, constant: 90)
       default: break
       }
-        moveTop?.priority = .defaultLow
-        moveTop?.isActive = true
+      
+      moveTop?.priority = .defaultLow
+      moveTop?.isActive = true
       dropButtons.append(tempButton)
       dropMoveConstraint.append(moveTop)
     }
@@ -158,16 +156,13 @@ class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     animate()
   }
   
-  
   private func autoLayout() {
     baseButton.topAnchor.constraint(equalTo: collectionView.topAnchor, constant: 350).isActive = true
     baseButton.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor, constant: 265).isActive = true
     baseButton.translatesAutoresizingMaskIntoConstraints = false
     baseButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
     baseButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
-    
   }
-  
   
   func setupNoti() {
     NotificationCenter.default.addObserver(self, selector: #selector(reload(_:)), name: .reload, object: nil)
@@ -176,9 +171,6 @@ class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
   @objc func reload(_ noti: Notification) {
     print("reload")
     collectionView.reloadData()
-  }
-  
-  func makeFoodList() {
   }
   
   func naviSet() {
@@ -191,13 +183,14 @@ class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
   }
   
   func setupCollectionView() {
+    
     collectionView.backgroundColor = .white
     
     collectionView.contentInsetAdjustmentBehavior = .never
     
     collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
     
-    collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header")
+    collectionView.register(CollectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header")
   }
   
   func setupNotification() {
@@ -213,11 +206,11 @@ class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
   
   func showDetailVC(index: Int) {
     let detailVC = DetailViewController()
-    detailVC.food =   CollVC.food.list[index]   //foodList[index]
+    detailVC.food =   CollVC.food.list[index]
     navigationController?.pushViewController(detailVC, animated: true)
   }
   
-  // collection view operating //
+  // collection view operating
   func setupCollectionViewLayout() {
     if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
       layout.sectionInset = .init(top: 50 + padding, left: padding, bottom: 50 + padding, right: padding)
@@ -235,8 +228,9 @@ class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
   
   // header 본체
   override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-    let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath)
-//    print("header Reload")
+    let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! CollectionHeaderView
+    
+    header.setMainImage()
     return header
   }
   
@@ -253,15 +247,12 @@ class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
   // cell
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ImageCollectionViewCell
-    let name = CollVC.food.list[indexPath.item].iconImage //foodList[indexPath.item].imageNames.first
-    print("name: ", name)
+    let name = CollVC.food.list[indexPath.item].iconImage
     guard let image = CollVC.food.images[name] as? UIImage else {print("fail cell"); return cell  }
     cell.imageView.image = image
     cell.mainLabel.text = CollVC.food.list[indexPath.item].title
-    cell.sensitivityLabel.text = CollVC.food.list[indexPath.item].sensitivity //foodList[indexPath.item].gamsungLabel
-    cell.anotherInfo.text = CollVC.food.list[indexPath.item].info //foodList[indexPath.item].info
-    
-    //print("collectionView")
+    cell.sensitivityLabel.text = CollVC.food.list[indexPath.item].sensitivity
+    cell.anotherInfo.text = CollVC.food.list[indexPath.item].info
     return cell
   }
   

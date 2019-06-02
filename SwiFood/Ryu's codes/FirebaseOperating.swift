@@ -17,34 +17,26 @@ final class FireBaseOperating {
   var ref: DatabaseReference!
   var databaseHandle: DatabaseHandle?
   
-  var itemCount = 0
-  
-  
   init() {
     ref = Database.database().reference()
   }
   
-  func itemCounting() {
-    itemCount += 1
-    ref.child("Total").setValue(itemCount)
-  }
-  
   func writeFoodList(food: Food) {
+    let keyPath = ref.child("Foods").childByAutoId()// else { return print("firebase create key fail")}
     
-    ref?.child("Foods").child("\(itemCount)").updateChildValues(["title": food.title])
-    ref?.child("Foods").child("\(itemCount)").updateChildValues(["Comment": food.comment])
+    keyPath.updateChildValues(["title": food.title])
+    keyPath.updateChildValues(["Comment": food.comment])
     
-    let meta = [food.foodMeterial[0].0, food.foodMeterial[0].1]
-    ref?.child("Foods").child("\(itemCount)").updateChildValues(["foodMeterial": meta])
+    let meta = food.getFoodMeterial()
+    keyPath.updateChildValues(["foodMeterial": meta])
     
-    ref?.child("Foods").child("\(itemCount)").updateChildValues(["iconImage": food.iconImage])
-    ref?.child("Foods").child("\(itemCount)").updateChildValues(["info": food.info])
-    ref?.child("Foods").child("\(itemCount)").updateChildValues(["level": food.level])
-    ref?.child("Foods").child("\(itemCount)").updateChildValues(["meterialImage": food.meterialImages])
-    ref?.child("Foods").child("\(itemCount)").updateChildValues(["recipe": food.recipe])
-    ref?.child("Foods").child("\(itemCount)").updateChildValues(["sensitivity": food.sensitivity])
-    
-    
+    keyPath.updateChildValues(["iconImage": food.iconImage])
+    keyPath.updateChildValues(["info": food.info])
+    keyPath.updateChildValues(["level": food.level])
+    keyPath.updateChildValues(["meterialImage": food.meterialImages])
+    keyPath.updateChildValues(["recipe": food.recipe])
+    keyPath.updateChildValues(["sensitivity": food.sensitivity])
+
     // TODO : write Image Data
     if let image = CollVC.food.images[food.iconImage] as? UIImage {
       self.uploadImage(image: image, name: food.iconImage)
@@ -57,8 +49,6 @@ final class FireBaseOperating {
     }
     
     NotificationCenter.default.post(name: .reload, object: nil)
-    self.itemCounting()
-    
   }
   
   func readFoodList() {
@@ -121,13 +111,14 @@ final class FireBaseOperating {
   }
   
   func uploadImage(image: UIImage, name: String) {
-    guard let resingImage = resize(image: image, scale: 0.1) else { return print("resize") }
-    guard let data = resingImage.pngData() else { return print("resizeing fail")}
+//    guard let resingImage = resize(image: image, scale: 0.3) else { return print("resize") }
+    guard let resingData = image.jpegData(compressionQuality: 0.3) else { return print("resize") }
+//    guard let resingImage = UIImage(data: resingData) else { return }
     //let imageName = "\(Int(NSDate.timeIntervalSinceReferenceDate * 1000)).jpg"
     
     let riversRef = Storage.storage().reference().child("swifood").child(name)
     
-    riversRef.putData(data, metadata: nil) { (metadata, error) in
+    let uploadTesk = riversRef.putData(resingData, metadata: nil) { (metadata, error) in
       guard let metadata = metadata else {
         // Uh-oh, an error occurred!
         print("-----metadata-----uploadImage error")
@@ -143,16 +134,12 @@ final class FireBaseOperating {
         }
       }
     }
-  }
-  
-  func resize(image: UIImage, scale: CGFloat) -> UIImage? {
-    let transform = CGAffineTransform(scaleX: scale, y: scale)
-    let size = image.size.applying(transform)
-    UIGraphicsBeginImageContext(size)
-    image.draw(in: CGRect(origin: .zero, size: size))
-    let resultImage = UIGraphicsGetImageFromCurrentImageContext()
-    UIGraphicsEndImageContext()
     
-    return resultImage
+    print("\n ================= progress ====================== \n")
+    uploadTesk.observe(.progress) { snapshot in
+      print("\(name) progress : \(snapshot.progress)")
+      
+      
+    }
   }
 }
