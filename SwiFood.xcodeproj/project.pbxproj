@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,6 +38,9 @@
 		42D0080722941CD60099715E /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0080622941CD60099715E /* CollectionHeaderView.swift */; };
 		42D00809229421F60099715E /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D00808229421F60099715E /* Extensions+UIView.swift */; };
 		42D0080B2294269A0099715E /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0080A2294269A0099715E /* StretchyHeaderLayout.swift */; };
+		612FBAC622AE50AA0076AD1A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612FBAC522AE50AA0076AD1A /* Extension.swift */; };
+		612FBAC822AE50CC0076AD1A /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612FBAC722AE50CC0076AD1A /* MyPageViewController.swift */; };
+		612FBAD022AE53110076AD1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612FBACF22AE53110076AD1A /* LoginViewController.swift */; };
 		C117AF4F229BE0AD004FC486 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C117AF4E229BE0AD004FC486 /* SplashViewController.swift */; };
 		C1757A5B229D4E6400A20869 /* InputCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1757A59229D4E6400A20869 /* InputCommentView.swift */; };
 		C1757A5C229D4E6400A20869 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1757A5A229D4E6400A20869 /* CommentViewController.swift */; };
@@ -77,6 +80,9 @@
 		42D0080622941CD60099715E /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		42D00808229421F60099715E /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Extensions+UIView.swift"; path = "SwiFood/Extensions+UIView.swift"; sourceTree = SOURCE_ROOT; };
 		42D0080A2294269A0099715E /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
+		612FBAC522AE50AA0076AD1A /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		612FBAC722AE50CC0076AD1A /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		612FBACF22AE53110076AD1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6C87F60EFB5CA7D9961D5F26 /* Pods-SwiFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiFood.debug.xcconfig"; path = "Target Support Files/Pods-SwiFood/Pods-SwiFood.debug.xcconfig"; sourceTree = "<group>"; };
 		7BA3ED43897DFE2048F9BF9D /* Pods-SwiFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiFood.release.xcconfig"; path = "Target Support Files/Pods-SwiFood/Pods-SwiFood.release.xcconfig"; sourceTree = "<group>"; };
 		C117AF4E229BE0AD004FC486 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +161,9 @@
 				42D007ED2293C3550099715E /* Info.plist */,
 				42D007EA2293C3550099715E /* LaunchScreen.storyboard */,
 				42B47C5E229545BF00F45979 /* GoogleService-Info.plist */,
+				612FBAC722AE50CC0076AD1A /* MyPageViewController.swift */,
+				612FBACF22AE53110076AD1A /* LoginViewController.swift */,
+				612FBAC522AE50AA0076AD1A /* Extension.swift */,
 			);
 			path = SwiFood;
 			sourceTree = "<group>";
@@ -208,6 +217,7 @@
 				42D007DB2293C3540099715E /* Frameworks */,
 				42D007DC2293C3540099715E /* Resources */,
 				F727D78D55FF4C39E27B09D6 /* [CP] Embed Pods Frameworks */,
+				26CB558FA66E063B4F1E8A07 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,6 +282,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		26CB558FA66E063B4F1E8A07 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiFood/Pods-SwiFood-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiFood/Pods-SwiFood-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiFood/Pods-SwiFood-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E155BD288FAB5786AD04038E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,22 +327,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiFood/Pods-SwiFood-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-SwiFood/Pods-SwiFood-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-SwiFood/Pods-SwiFood-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -329,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				612FBAC822AE50CC0076AD1A /* MyPageViewController.swift in Sources */,
 				42B47C9D2296CD6900F45979 /* AppDelegate.swift in Sources */,
 				42B47C952296CA6300F45979 /* DetailViewController.swift in Sources */,
 				42B47CBA2297D25400F45979 /* FoodIntroductionTableViewCell.swift in Sources */,
@@ -344,6 +361,7 @@
 				42B47CB92297D25400F45979 /* FoodRecipeTableViewCell.swift in Sources */,
 				42D007FC2293FD960099715E /* ImageCollectionViewCell.swift in Sources */,
 				C1757A5B229D4E6400A20869 /* InputCommentView.swift in Sources */,
+				612FBAC622AE50AA0076AD1A /* Extension.swift in Sources */,
 				42D00805229418F90099715E /* CollVC.swift in Sources */,
 				42B47CB82297D25400F45979 /* HeaderTableViewCell.swift in Sources */,
 				42B47CBC2297D25400F45979 /* FoodSubMaterialTableViewCell.swift in Sources */,
@@ -351,6 +369,7 @@
 				42B47C612295496E00F45979 /* FirebaseTestVC.swift in Sources */,
 				42D0080B2294269A0099715E /* StretchyHeaderLayout.swift in Sources */,
 				42D0080722941CD60099715E /* CollectionHeaderView.swift in Sources */,
+				612FBAD022AE53110076AD1A /* LoginViewController.swift in Sources */,
 				4227A64922ADD7F700BDB6D5 /* RatingStarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
