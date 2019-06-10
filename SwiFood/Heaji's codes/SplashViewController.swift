@@ -40,7 +40,12 @@ class SplashViewController: UIViewController {
         Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
             let appDelegate =  UIApplication.shared.delegate as! AppDelegate
             let tapbar = UITabBarController()
-            let navi = UINavigationController(rootViewController: CollVC(collectionViewLayout: StretchyHeaderLayout()))
+          
+            let headerLayout = StretchyHeaderLayout()
+            let collectionVC = CollVC(collectionViewLayout: headerLayout)
+            collectionVC.headerViewLayout = headerLayout
+          
+            let navi = UINavigationController(rootViewController: collectionVC)
             navi.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), tag: 0)
             
             let testVC = FirebaseTestVC()

@@ -38,6 +38,8 @@ class FirebaseTestVC: UIViewController {
   let titleTextField = UITextField()
   let levelLabel = UILabel()
   
+  var ratingStarView: RatingStarView!  //= RatingStarView()
+  
   let foodMeterialLeftOneTF   = UITextField()
   let foodMeterialRightOneTF  = UITextField()
   let foodMeterialLeftTwoTF   = UITextField()
@@ -62,6 +64,8 @@ class FirebaseTestVC: UIViewController {
     picker.allowsEditing = true
   }
   
+  
+  
   func setupView() {
     let pading = 10
     let posX = 15
@@ -76,10 +80,16 @@ class FirebaseTestVC: UIViewController {
     
     posY += 45
     levelLabel.frame = CGRect(x: posX, y: posY, width: Int(width - pading * 2), height: 40)
-    levelLabel.text = "Level: ★★★☆☆"
+    levelLabel.text = "Level: "//"Level: ★★★☆☆"
     levelLabel.textColor = .lightGray
     levelLabel.font =  UIFont(name: "Palatino", size: 15)
     view.addSubview(levelLabel)
+    
+    // rating View
+    ratingStarView = RatingStarView(frame: CGRect(x: posX + Int(width/4), y: posY, width: Int(width/2), height: 40))
+    view.addSubview(ratingStarView)
+    
+    ratingStarView.configure(initStar: 3)
     
     posY += 45
     foodMeterialLeftOneTF.frame = CGRect(x: posX, y: posY, width: Int(width/2 - pading*2), height: 40)
@@ -256,6 +266,15 @@ class FirebaseTestVC: UIViewController {
     metaImageButtonSecond.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
     metaImageButtonSecond.widthAnchor.constraint(equalToConstant: view.frame.width/3).isActive = true
     metaImageButtonSecond.heightAnchor.constraint(equalToConstant: 30).isActive = true
+    
+    
+//    ratingStarView.translatesAutoresizingMaskIntoConstraints = false
+//    ratingStarView.widthAnchor.constraint(equalTo: levelLabel.widthAnchor, multiplier: 1).isActive = true
+//    ratingStarView.heightAnchor.constraint(equalTo: levelLabel.heightAnchor, multiplier: 1).isActive = true
+//    ratingStarView.leadingAnchor.constraint(equalTo: levelLabel.leadingAnchor).isActive = true
+//    ratingStarView.topAnchor.constraint(equalTo: levelLabel.topAnchor).isActive = true
+    
+    
   }
   
   @objc func uploadData(_ sender: UIButton) {
@@ -375,9 +394,8 @@ class FirebaseTestVC: UIViewController {
     // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
     islandRef.getData(maxSize: 10 * 1024 * 1024) { data, error in
       if let error = error {
-        // Uh-oh, an error occurred!
+        print("photoDownload error: \(error.localizedDescription)")
       } else {
-        // Data for "images/island.jpg" is returned
         self.imageView.image = UIImage(data: data!)
       }
     }
@@ -407,8 +425,7 @@ class FirebaseTestVC: UIViewController {
     
     riversRef.putData(data, metadata: nil) { (metadata, error) in
       guard let metadata = metadata else {
-        // Uh-oh, an error occurred!
-        print("error")
+        print("firebaseUpload metadata error")
         return
       }
       
@@ -433,17 +450,17 @@ extension FirebaseTestVC: UIImagePickerControllerDelegate, UINavigationControlle
     
     switch selectButton {
     case 0:
-      print(imageName)
+//      print(imageName)
       iconImageName = imageName
       iconImage = resingImage
       iconimageView.image = resingImage
     case 1:
-      print(imageName)
+//      print(imageName)
       metaFirstName = imageName
       metaImageFirst = resingImage
       metaFirstImageView.image = resingImage
     default:
-      print(imageName)
+//      print(imageName)
       metaSecondName = imageName
       metaImageSecond = resingImage
       metaSecondImageView.image = resingImage

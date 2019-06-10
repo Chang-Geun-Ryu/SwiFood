@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol HeaderStrechy: class {
+  func strechyFrame(offsetY: CGFloat)
+}
+
 class StretchyHeaderLayout: UICollectionViewFlowLayout {
+  
+  var delegate: HeaderStrechy?
   
   override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
     
@@ -31,6 +37,8 @@ class StretchyHeaderLayout: UICollectionViewFlowLayout {
         let height = attributes.frame.height - contentOffsetY
         
         attributes.frame = CGRect(x: 0, y: contentOffsetY, width: width, height: height)
+        
+        delegate?.strechyFrame(offsetY: contentOffsetY)
       }
     })
     
