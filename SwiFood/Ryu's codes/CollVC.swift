@@ -30,6 +30,8 @@ class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 //  var foodNames = ["MainApplePie", "MainChocolate", "MainDessert", "MainGrapePizza", "MainTarte"]
   let testButton = UIButton(type: .system)
   var constraint: NSLayoutConstraint!
+  
+  weak var headerViewLayout: StretchyHeaderLayout?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -206,7 +208,7 @@ class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
   
   func showDetailVC(index: Int) {
     let detailVC = DetailViewController()
-    detailVC.food =   CollVC.food.list[index]
+    detailVC.food = CollVC.food.list[index]
     navigationController?.pushViewController(detailVC, animated: true)
   }
   
@@ -230,6 +232,8 @@ class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
   override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
     let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! CollectionHeaderView
     
+    // get delegate self
+    headerViewLayout?.delegate = header.getSelf()
     header.setMainImage()
     return header
   }
@@ -267,8 +271,7 @@ class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 extension CollVC: UISearchResultsUpdating {
   func updateSearchResults(for searchController: UISearchController) {
     let searchBar = searchController.searchBar
-//    let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
-//    filterContentForSearchText(searchController.searchBar.text!, scope: scope)
+
   }
 }
 

@@ -85,8 +85,6 @@ final class FireBaseOperating {
                       sensitivity: sensitivity ?? "",
                       info: info ?? "")
       
-      print("download image: ", meterialImage)
-      
       CollVC.food.list.append(food)
       self.downloadImage(name: iconImage ?? "")
       self.downloadImage(name: meterialImage?[0] ?? "")
@@ -100,27 +98,29 @@ final class FireBaseOperating {
     let isRef = storageRef.child("swifood/\(name)")
     
     // Download in memory with a maximum allowed size of 10MB (10 * 1024 * 1024 bytes)
-    isRef.getData(maxSize: 10 * 1024 * 1024) { data, error in
+    let downloadTask = isRef.getData(maxSize: 10 * 1024 * 1024) { data, error in
       if let error = error {
-        print("\n/////////////// downloadImage error: ", error.localizedDescription)
+        print("\n /////////////// downloadImage error: ", error.localizedDescription)
       } else {
         CollVC.food.images.updateValue( UIImage(data: data!), forKey: name)
         NotificationCenter.default.post(name: .reload, object: nil)
       }
     }
+    
+    print("\n ================= progress ====================== \n")
+    downloadTask.observe(.progress) { snapshot in
+//      print("\(name)  fileTotalCount progress : \(snapshot.progress?.completedUnitCount)")
+      print("\(name)  Fraction completed : \(snapshot.progress?.fractionCompleted)")
+    }
   }
   
   func uploadImage(image: UIImage, name: String) {
-//    guard let resingImage = resize(image: image, scale: 0.3) else { return print("resize") }
     guard let resingData = image.jpegData(compressionQuality: 0.3) else { return print("resize") }
-//    guard let resingImage = UIImage(data: resingData) else { return }
-    //let imageName = "\(Int(NSDate.timeIntervalSinceReferenceDate * 1000)).jpg"
     
     let riversRef = Storage.storage().reference().child("swifood").child(name)
     
     let uploadTesk = riversRef.putData(resingData, metadata: nil) { (metadata, error) in
       guard let metadata = metadata else {
-        // Uh-oh, an error occurred!
         print("-----metadata-----uploadImage error")
         return
       }
@@ -128,7 +128,6 @@ final class FireBaseOperating {
       // You can also access to download URL after upload.
       riversRef.downloadURL { (url, error) in
         guard let downloadURL = url else {
-          // Uh-oh, an error occurred!
           print("-----downloadURL-----uploadImage error2")
           return
         }
@@ -138,8 +137,6 @@ final class FireBaseOperating {
     print("\n ================= progress ====================== \n")
     uploadTesk.observe(.progress) { snapshot in
       print("\(name) progress : \(snapshot.progress)")
-      
-      
     }
   }
 }

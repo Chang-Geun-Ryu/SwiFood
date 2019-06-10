@@ -105,6 +105,4 @@ extension CommentViewController: UITableViewDataSource {
     cell.feedNickNameLabel.text = food?.comment[indexPath.row]
     return cell
   }
-  
-  
 }

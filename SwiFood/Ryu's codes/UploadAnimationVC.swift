@@ -16,8 +16,6 @@ class UploadAnimationVC: UIViewController {
   }
 }
 
-
-
 class LoadingHUD: NSObject {
   private static let sharedInstance = LoadingHUD()
   private var popupView: UIImageView?

@@ -28,15 +28,19 @@ class CollectionHeaderView: UICollectionReusableView {
   
   var timer = Timer()
   
-  
   override init(frame: CGRect) {
     super.init(frame: frame)
-//    scrollView.addSubview(imageView)
+    
     addSubview(scrollView)
-    scrollView.fillSuperview()
+//    scrollView.fillSuperview()
+    
+    scrollView.translatesAutoresizingMaskIntoConstraints = false
+    scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+    scrollView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+    scrollView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+    scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+    
     setupImageViews(imageCount: 5)
-//    setupImageView()
-//    setupGesture()
     
     pageControl.numberOfPages = 5
     pageControl.currentPage = 0
@@ -52,6 +56,10 @@ class CollectionHeaderView: UICollectionReusableView {
     pageControl.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
     
     setupTimer()
+  }
+  
+  deinit {
+    timer.fire()  // scheduledTimer 해제
   }
   
   func setupTimer() {
@@ -107,20 +115,17 @@ class CollectionHeaderView: UICollectionReusableView {
   
   func setMainImage() {
     for num in 0..<foodImageViews.count{
-      guard let image = CollVC.food.images[CollVC.food.list[num].iconImage] as? UIImage else {print("fail header"); return  }
+      guard let image = CollVC.food.images[CollVC.food.list[num].iconImage] as? UIImage
+        else {
+          print("fail header")
+          return
+      }
+      
       foodImageViews[num].image = image
     }
   }
   
   func setupGesture() {
-//    let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(_:)))
-//    swipeRight.direction = .right
-//    addGestureRecognizer(swipeRight)
-//
-//    let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(_:)))
-//    swipeLeft.direction = .left
-//    addGestureRecognizer(swipeLeft)
-
     let tap = UITapGestureRecognizer(target: self, action: #selector(tapGesture(_:)))
     tap.numberOfTapsRequired = 1
     tap.numberOfTouchesRequired = 1
@@ -133,40 +138,24 @@ class CollectionHeaderView: UICollectionReusableView {
     NotificationCenter.default.post(name: .headerTap, object: nil, userInfo: ["currentImage": pageControl.currentPage])
   }
   
-  @objc func swipeGesture(_ gesture: UIGestureRecognizer) {
-    guard let swipeGesture = gesture as? UISwipeGestureRecognizer else { return }
-    
-    switch swipeGesture.direction {
-    case UISwipeGestureRecognizer.Direction.left:
-      if currentImage == CollVC.food.list.count - 1 {
-        currentImage = 0
-      } else {
-        currentImage += 1
-      }
-      guard let image = CollVC.food.images[CollVC.food.list[currentImage].iconImage] as? UIImage else {print("fail header"); return  }
-      imageView.image = image //UIImage(named: images[currentImage])
-    case UISwipeGestureRecognizer.Direction.right:
-      if currentImage == 0 {
-        currentImage = CollVC.food.list.count - 1
-      } else {
-        currentImage -= 1
-      }
-      guard let image = CollVC.food.images[CollVC.food.list[currentImage].iconImage] as? UIImage else {print("fail header"); return  }
-      imageView.image = image //UIImage(named: images[currentImage])
-    default:
-      break
-    }
-  }
-  
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
   
+  func getSelf() -> CollectionHeaderView {
+    return self
+  }
 }
 
 
 extension CollectionHeaderView: UIScrollViewDelegate {
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     pageControl.currentPage = Int(scrollView.contentOffset.x) / Int(frame.width)
+  }
+}
+
+extension CollectionHeaderView: HeaderStrechy {
+  func strechyFrame(offsetY: CGFloat) {
+    
   }
 }
