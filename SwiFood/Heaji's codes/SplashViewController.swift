@@ -50,7 +50,11 @@ class SplashViewController: UIViewController {
             
             let testVC = FirebaseTestVC()
             testVC.tabBarItem = UITabBarItem(title: "Recipe", image: UIImage(named: "chef"), tag: 1)
-            tapbar.setViewControllers([navi, testVC], animated: true)
+            
+            let myPageVC = MyPageViewController()
+            myPageVC.tabBarItem = UITabBarItem(title: "MyPage", image: UIImage(named: "chef"), tag: 2)
+            
+            tapbar.setViewControllers([navi, testVC, myPageVC], animated: true)
             
             tapbar.tabBar.tintColor = .gray
             appDelegate.window?.rootViewController = tapbar
