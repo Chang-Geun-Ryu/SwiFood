@@ -77,7 +77,7 @@ class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     baseButton.layer.borderColor = UIColor.gray.cgColor
     baseButton.layer.cornerRadius = 5
     
-    collectionView.addSubview(baseButton)
+    collectionView.addSubview(baseButton)    
   }
   
   @objc private func baseButtonAction() {
