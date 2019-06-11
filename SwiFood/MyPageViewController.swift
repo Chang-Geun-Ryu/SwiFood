@@ -76,8 +76,18 @@ class MyPageViewController: UIViewController {
     }
     
     @objc private func signIn(_ sender: UIButton) {
-        let loginVC = LoginViewController()
-        present(loginVC, animated: true)
+        
+        // create the alert
+        let alert = UIAlertController(title: "로그인 하시겠습니까?", message: nil, preferredStyle: .alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { _ in
+            let loginVC = LoginViewController()
+            self.present(loginVC, animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
     @objc private func signOut(_ sender: UIButton) {
