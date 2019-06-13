@@ -52,10 +52,13 @@ final class FireBaseOperating {
   }
   
   func readFoodList() {
-    
     ref.child("Foods").observe(.childAdded) { (metadata) in
-      
       guard let value = metadata.value  as? [String:Any] else { return print("metadata.value: nil")}
+      
+      guard let beOpen = value["open"] as? Bool,
+        let email = value["user"] as? String,
+      (CollVC.userEmail == email && beOpen == false)
+        else { return print("food recipe is private") }
       
       let commentArray = value["Comment"] as? [String]
       let foodMeterial = value["foodMeterial"] as? [String]
@@ -90,6 +93,50 @@ final class FireBaseOperating {
       self.downloadImage(name: meterialImage?[0] ?? "")
       self.downloadImage(name: meterialImage?[1] ?? "")
     }
+  }
+  
+  func reloadData() {
+    ref.child("Foods").observeSingleEvent(of: .value, with: { (metadata) in
+      guard let value = metadata.value  as? [String:Any] else { return print("metadata.value: nil")}
+      
+      guard let beOpen = value["open"] as? Bool,
+        let email = value["user"] as? String,
+        (CollVC.userEmail == email && beOpen == false)
+        else { return print("food recipe is private") }
+      
+      let commentArray = value["Comment"] as? [String]
+      let foodMeterial = value["foodMeterial"] as? [String]
+      let iconImage = value["iconImage"] as? String
+      let info = value["info"] as? String
+      let level = value["level"] as? String
+      let sensitivity = value["sensitivity"] as? String
+      let meterialImage = value["meterialImage"] as? [String]
+      let recipe = value["recipe"] as? [String]
+      let title = value["title"] as? String
+      
+      var tuple: [(String, String)] = []
+      
+      for num in 0..<(foodMeterial?.count ?? 0) {
+        guard num % 2 == 0 else { continue }
+        let tupleAppen = (foodMeterial?[num] ?? "", foodMeterial?[num + 1] ?? "")
+        tuple.append(tupleAppen)
+      }
+      
+      let food = Food(iconImage: iconImage ?? "",
+                      title: title ?? "",
+                      level: level ?? "",
+                      comment: commentArray ?? [],
+                      foodMeterial: tuple,
+                      meterialImages: meterialImage ?? [],
+                      recipe: recipe ?? [],
+                      sensitivity: sensitivity ?? "",
+                      info: info ?? "")
+      
+      CollVC.food.list.append(food)
+      self.downloadImage(name: iconImage ?? "")
+      self.downloadImage(name: meterialImage?[0] ?? "")
+      self.downloadImage(name: meterialImage?[1] ?? "")
+    })
   }
   
   func downloadImage(name: String) {

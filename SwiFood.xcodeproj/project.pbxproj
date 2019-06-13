@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		20EF0D00993B3092B78A84C2 /* Pods_SwiFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5ECA9F7D9971D722330EF2 /* Pods_SwiFood.framework */; };
-		42081B8E229F6ED400D4C071 /* CollectionScrollHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42081B8D229F6ED400D4C071 /* CollectionScrollHeaderView.swift */; };
 		42081BD022A3876200D4C071 /* UploadAnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42081BCF22A3876200D4C071 /* UploadAnimationVC.swift */; };
 		4227A64922ADD7F700BDB6D5 /* RatingStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227A64822ADD7F700BDB6D5 /* RatingStarView.swift */; };
+		4227A64B22AE69DA00BDB6D5 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4227A64A22AE69DA00BDB6D5 /* UserInfo.swift */; };
 		42B47C5F229545BF00F45979 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42B47C5E229545BF00F45979 /* GoogleService-Info.plist */; };
 		42B47C612295496E00F45979 /* FirebaseTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47C602295496E00F45979 /* FirebaseTestVC.swift */; };
 		42B47C632296202800F45979 /* FirebaseOperating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B47C622296202800F45979 /* FirebaseOperating.swift */; };
@@ -48,9 +48,9 @@
 
 /* Begin PBXFileReference section */
 		2C5ECA9F7D9971D722330EF2 /* Pods_SwiFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		42081B8D229F6ED400D4C071 /* CollectionScrollHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionScrollHeaderView.swift; sourceTree = "<group>"; };
 		42081BCF22A3876200D4C071 /* UploadAnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadAnimationVC.swift; sourceTree = "<group>"; };
 		4227A64822ADD7F700BDB6D5 /* RatingStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingStarView.swift; sourceTree = "<group>"; };
+		4227A64A22AE69DA00BDB6D5 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		42B47C5E229545BF00F45979 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		42B47C602295496E00F45979 /* FirebaseTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTestVC.swift; sourceTree = "<group>"; };
 		42B47C622296202800F45979 /* FirebaseOperating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseOperating.swift; sourceTree = "<group>"; };
@@ -157,6 +157,7 @@
 				42D00803229418CB0099715E /* Ryu's codes */,
 				42B47C9C2296CD6900F45979 /* AppDelegate.swift */,
 				42B47CC32297D30700F45979 /* FoodData.swift */,
+				4227A64A22AE69DA00BDB6D5 /* UserInfo.swift */,
 				42D007E82293C3550099715E /* Assets.xcassets */,
 				42D007ED2293C3550099715E /* Info.plist */,
 				42D007EA2293C3550099715E /* LaunchScreen.storyboard */,
@@ -174,7 +175,6 @@
 				42D00804229418F90099715E /* CollVC.swift */,
 				42D007FB2293FD960099715E /* ImageCollectionViewCell.swift */,
 				42D0080622941CD60099715E /* CollectionHeaderView.swift */,
-				42081B8D229F6ED400D4C071 /* CollectionScrollHeaderView.swift */,
 				42D0080A2294269A0099715E /* StretchyHeaderLayout.swift */,
 				42D00808229421F60099715E /* Extensions+UIView.swift */,
 				42B47C602295496E00F45979 /* FirebaseTestVC.swift */,
@@ -349,7 +349,6 @@
 				42B47C9D2296CD6900F45979 /* AppDelegate.swift in Sources */,
 				42B47C952296CA6300F45979 /* DetailViewController.swift in Sources */,
 				42B47CBA2297D25400F45979 /* FoodIntroductionTableViewCell.swift in Sources */,
-				42081B8E229F6ED400D4C071 /* CollectionScrollHeaderView.swift in Sources */,
 				42B47CB52297D25400F45979 /* FoodMaterialTitleTableViewCell.swift in Sources */,
 				42B47CBF2297D25400F45979 /* FoodImageTableViewCell.swift in Sources */,
 				42B47CB62297D25400F45979 /* CommentTableViewCell.swift in Sources */,
@@ -370,6 +369,7 @@
 				42D0080B2294269A0099715E /* StretchyHeaderLayout.swift in Sources */,
 				42D0080722941CD60099715E /* CollectionHeaderView.swift in Sources */,
 				612FBAD022AE53110076AD1A /* LoginViewController.swift in Sources */,
+				4227A64B22AE69DA00BDB6D5 /* UserInfo.swift in Sources */,
 				4227A64922ADD7F700BDB6D5 /* RatingStarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

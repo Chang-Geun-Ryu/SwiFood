@@ -15,6 +15,7 @@ extension Notification.Name {
 class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
   
   static var food: FoodData = FoodData()
+  static var userEmail: String?
   
   let searchController = UISearchController(searchResultsController: nil)
   //by hj
@@ -171,7 +172,6 @@ class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
   }
   
   @objc func reload(_ noti: Notification) {
-    print("reload")
     collectionView.reloadData()
   }
   
@@ -270,13 +270,11 @@ class CollVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
 extension CollVC: UISearchResultsUpdating {
   func updateSearchResults(for searchController: UISearchController) {
-    let searchBar = searchController.searchBar
-
+//    let searchBar = searchController.searchBar
   }
 }
 
 extension CollVC: UISearchBarDelegate {
   func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-//    filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
   }
 }
