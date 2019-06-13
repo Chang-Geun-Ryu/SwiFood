@@ -282,6 +282,7 @@ class FirebaseTestVC: UIViewController {
     let foodmeta:[(String,String)] = [(foodMeterialLeftOneTF.text ?? "",foodMeterialRightOneTF.text ?? ""),
                     (foodMeterialLeftTwoTF.text ?? "", foodMeterialRightTwoTF.text ?? ""),
                     (foodMeterialLeftThreeTF.text ?? "", foodMeterialRightThreeTF.text ?? "")]
+    
     var recipe = [String]()
     recipe.append(recipeStepOneTF.text ?? "")
     recipe.append(recipeStepTwoTF.text ?? "")
@@ -289,7 +290,9 @@ class FirebaseTestVC: UIViewController {
     recipe.append(recipeStepFourTF.text ?? "")
     recipe.append(recipeStepFiveTF.text ?? "")
     
-    let food = Food(iconImage: iconImageName, title: titleTextField.text ?? "title", level: "★★★☆☆", comment: [""], foodMeterial: foodmeta, meterialImages: [metaFirstName, metaSecondName], recipe: recipe, sensitivity: "아주 맛있엉~", info: "존맛")
+    let level = ratingStarView.getStar()
+    
+    let food = Food(iconImage: iconImageName, title: titleTextField.text ?? "title", level: level, comment: [""], foodMeterial: foodmeta, meterialImages: [metaFirstName, metaSecondName], recipe: recipe, sensitivity: "아주 맛있엉~", info: "존맛")
     
     guard food.checkFoodData() else {return print("food recipe is unstable")}
     
