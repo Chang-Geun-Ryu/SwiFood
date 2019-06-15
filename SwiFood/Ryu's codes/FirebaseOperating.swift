@@ -9,6 +9,7 @@
 import Foundation
 import Firebase
 import FirebaseDatabase
+import FirebaseAuth
 
 final class FireBaseOperating {
   
@@ -52,91 +53,67 @@ final class FireBaseOperating {
   }
   
   func readFoodList() {
+    
     ref.child("Foods").observe(.childAdded) { (metadata) in
-      guard let value = metadata.value  as? [String:Any] else { return print("metadata.value: nil")}
-      
-      guard let beOpen = value["open"] as? Bool,
-        let email = value["user"] as? String,
-      (CollVC.userEmail == email && beOpen == false)
-        else { return print("food recipe is private") }
-      
-      let commentArray = value["Comment"] as? [String]
-      let foodMeterial = value["foodMeterial"] as? [String]
-      let iconImage = value["iconImage"] as? String
-      let info = value["info"] as? String
-      let level = value["level"] as? String
-      let sensitivity = value["sensitivity"] as? String
-      let meterialImage = value["meterialImage"] as? [String]
-      let recipe = value["recipe"] as? [String]
-      let title = value["title"] as? String
-      
-      var tuple: [(String, String)] = []
-      
-      for num in 0..<(foodMeterial?.count ?? 0) {
-        guard num % 2 == 0 else { continue }
-        let tupleAppen = (foodMeterial?[num] ?? "", foodMeterial?[num + 1] ?? "")
-        tuple.append(tupleAppen)
-      }
-      
-      let food = Food(iconImage: iconImage ?? "",
-                      title: title ?? "",
-                      level: level ?? "",
-                      comment: commentArray ?? [],
-                      foodMeterial: tuple,
-                      meterialImages: meterialImage ?? [],
-                      recipe: recipe ?? [],
-                      sensitivity: sensitivity ?? "",
-                      info: info ?? "")
-      
-      CollVC.food.list.append(food)
-      self.downloadImage(name: iconImage ?? "")
-      self.downloadImage(name: meterialImage?[0] ?? "")
-      self.downloadImage(name: meterialImage?[1] ?? "")
+      self.getRecipeData(snapshot: metadata)
     }
   }
   
   func reloadData() {
+    // login or logout시 호출 필요
+    CollVC.food.list.removeAll()
+    CollVC.food.defaultFoodRecipe()
     ref.child("Foods").observeSingleEvent(of: .value, with: { (metadata) in
-      guard let value = metadata.value  as? [String:Any] else { return print("metadata.value: nil")}
-      
-      guard let beOpen = value["open"] as? Bool,
-        let email = value["user"] as? String,
-        (CollVC.userEmail == email && beOpen == false)
-        else { return print("food recipe is private") }
-      
-      let commentArray = value["Comment"] as? [String]
-      let foodMeterial = value["foodMeterial"] as? [String]
-      let iconImage = value["iconImage"] as? String
-      let info = value["info"] as? String
-      let level = value["level"] as? String
-      let sensitivity = value["sensitivity"] as? String
-      let meterialImage = value["meterialImage"] as? [String]
-      let recipe = value["recipe"] as? [String]
-      let title = value["title"] as? String
-      
-      var tuple: [(String, String)] = []
-      
-      for num in 0..<(foodMeterial?.count ?? 0) {
-        guard num % 2 == 0 else { continue }
-        let tupleAppen = (foodMeterial?[num] ?? "", foodMeterial?[num + 1] ?? "")
-        tuple.append(tupleAppen)
-      }
-      
-      let food = Food(iconImage: iconImage ?? "",
-                      title: title ?? "",
-                      level: level ?? "",
-                      comment: commentArray ?? [],
-                      foodMeterial: tuple,
-                      meterialImages: meterialImage ?? [],
-                      recipe: recipe ?? [],
-                      sensitivity: sensitivity ?? "",
-                      info: info ?? "")
-      
-      CollVC.food.list.append(food)
-      self.downloadImage(name: iconImage ?? "")
-      self.downloadImage(name: meterialImage?[0] ?? "")
-      self.downloadImage(name: meterialImage?[1] ?? "")
+      self.getRecipeData(snapshot: metadata)
     })
+    
+  }
+  
+  private func getRecipeData(snapshot: DataSnapshot) {
+    guard let value = snapshot.value  as? [String:Any] else { return print("snapshot: nil")}
+    
+    // MARK - user 가 nil 일때 처리
+    if let authEmail = Auth.auth().currentUser?.email {   // login이 되어있는 경우
+      guard let email = value["user"] as? String,
+        authEmail == email   // user 가 nil 이거나, email이 기입이 안되어있거나
+        else { return print("food recipe is private (login status)") }
+    } else {  // login이 안되어 있을 경우, email 이 비어 있으면 진행(email 기입 되었다면 private recipe info)
+      guard let email = value["user"] as? String,
+        email.isEmpty else { return print("food recipe is private (logout status)") }
+    }
+    
+    let commentArray = value["Comment"] as? [String]
+    let foodMeterial = value["foodMeterial"] as? [String]
+    let iconImage = value["iconImage"] as? String
+    let info = value["info"] as? String
+    let level = value["level"] as? String
+    let sensitivity = value["sensitivity"] as? String
+    let meterialImage = value["meterialImage"] as? [String]
+    let recipe = value["recipe"] as? [String]
+    let title = value["title"] as? String
+    
+    var tuple: [(String, String)] = []
+    
+    for num in 0..<(foodMeterial?.count ?? 0) {
+      guard num % 2 == 0 else { continue }
+      let tupleAppen = (foodMeterial?[num] ?? "", foodMeterial?[num + 1] ?? "")
+      tuple.append(tupleAppen)
+    }
+    
+    let food = Food(iconImage: iconImage ?? "",
+                    title: title ?? "",
+                    level: level ?? "",
+                    comment: commentArray ?? [],
+                    foodMeterial: tuple,
+                    meterialImages: meterialImage ?? [],
+                    recipe: recipe ?? [],
+                    sensitivity: sensitivity ?? "",
+                    info: info ?? "")
+    
+    CollVC.food.list.append(food)
+    self.downloadImage(name: iconImage ?? "")
+    self.downloadImage(name: meterialImage?[0] ?? "")
+    self.downloadImage(name: meterialImage?[1] ?? "")
   }
   
   func downloadImage(name: String) {

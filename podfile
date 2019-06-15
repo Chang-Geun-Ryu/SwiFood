@@ -13,5 +13,5 @@ target 'SwiFood' do
   pod 'Firebase/Analytics'  
   pod 'FirebaseUI/Google'
   pod 'GoogleSignIn'
-
+  
 end
