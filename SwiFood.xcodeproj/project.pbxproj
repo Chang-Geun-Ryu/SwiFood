@@ -38,6 +38,10 @@
 		42D0080722941CD60099715E /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0080622941CD60099715E /* CollectionHeaderView.swift */; };
 		42D00809229421F60099715E /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D00808229421F60099715E /* Extensions+UIView.swift */; };
 		42D0080B2294269A0099715E /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0080A2294269A0099715E /* StretchyHeaderLayout.swift */; };
+		47025BCA22B8DB9600EA74C9 /* MyPageLoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47025BC922B8DB9600EA74C9 /* MyPageLoggedInView.swift */; };
+		47025BCC22B8DBB800EA74C9 /* MyPageLoggedInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47025BCB22B8DBB800EA74C9 /* MyPageLoggedInView.xib */; };
+		47D984A022B8FA1700AAD7BA /* MyRecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9849E22B8FA1700AAD7BA /* MyRecipeCell.swift */; };
+		47D984A122B8FA1700AAD7BA /* MyRecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47D9849F22B8FA1700AAD7BA /* MyRecipeCell.xib */; };
 		612FBAC622AE50AA0076AD1A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612FBAC522AE50AA0076AD1A /* Extension.swift */; };
 		612FBAC822AE50CC0076AD1A /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612FBAC722AE50CC0076AD1A /* MyPageViewController.swift */; };
 		612FBAD022AE53110076AD1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612FBACF22AE53110076AD1A /* LoginViewController.swift */; };
@@ -82,6 +86,10 @@
 		42D0080622941CD60099715E /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		42D00808229421F60099715E /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Extensions+UIView.swift"; path = "SwiFood/Extensions+UIView.swift"; sourceTree = SOURCE_ROOT; };
 		42D0080A2294269A0099715E /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
+		47025BC922B8DB9600EA74C9 /* MyPageLoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageLoggedInView.swift; sourceTree = "<group>"; };
+		47025BCB22B8DBB800EA74C9 /* MyPageLoggedInView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageLoggedInView.xib; sourceTree = "<group>"; };
+		47D9849E22B8FA1700AAD7BA /* MyRecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipeCell.swift; sourceTree = "<group>"; };
+		47D9849F22B8FA1700AAD7BA /* MyRecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyRecipeCell.xib; sourceTree = "<group>"; };
 		612FBAC522AE50AA0076AD1A /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		612FBAC722AE50CC0076AD1A /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		612FBACF22AE53110076AD1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -200,10 +208,22 @@
 			path = "Heaji's codes";
 			sourceTree = "<group>";
 		};
+		47D984A222B9041F00AAD7BA /* MyPageView */ = {
+			isa = PBXGroup;
+			children = (
+				47025BC922B8DB9600EA74C9 /* MyPageLoggedInView.swift */,
+				47025BCB22B8DBB800EA74C9 /* MyPageLoggedInView.xib */,
+				47D9849E22B8FA1700AAD7BA /* MyRecipeCell.swift */,
+				47D9849F22B8FA1700AAD7BA /* MyRecipeCell.xib */,
+			);
+			path = MyPageView;
+			sourceTree = "<group>";
+		};
 		61488D8D22B7D7A9000F9E7E /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
 				612FBAC722AE50CC0076AD1A /* MyPageViewController.swift */,
+				47D984A222B9041F00AAD7BA /* MyPageView */,
 				612FBACF22AE53110076AD1A /* LoginViewController.swift */,
 				61488D8E22B7D7CF000F9E7E /* SignUpViewController.swift */,
 				61488D9022B7EE17000F9E7E /* SignUpFieldCollectionViewCell.swift */,
@@ -290,6 +310,8 @@
 				42B47CBD2297D25400F45979 /* FoodImageTableViewCell.xib in Resources */,
 				42B47CBE2297D25400F45979 /* CommentTableViewCell.xib in Resources */,
 				42B47CC22297D25400F45979 /* FoodRecipeTableViewCell.xib in Resources */,
+				47025BCC22B8DBB800EA74C9 /* MyPageLoggedInView.xib in Resources */,
+				47D984A122B8FA1700AAD7BA /* MyRecipeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +390,7 @@
 				61488D8F22B7D7CF000F9E7E /* SignUpViewController.swift in Sources */,
 				42B47CB62297D25400F45979 /* CommentTableViewCell.swift in Sources */,
 				42B47C632296202800F45979 /* FirebaseOperating.swift in Sources */,
+				47D984A022B8FA1700AAD7BA /* MyRecipeCell.swift in Sources */,
 				42D00809229421F60099715E /* Extensions+UIView.swift in Sources */,
 				C1757A5C229D4E6400A20869 /* CommentViewController.swift in Sources */,
 				42081BD022A3876200D4C071 /* UploadAnimationVC.swift in Sources */,
@@ -379,6 +402,7 @@
 				42D00805229418F90099715E /* CollVC.swift in Sources */,
 				42B47CB82297D25400F45979 /* HeaderTableViewCell.swift in Sources */,
 				42B47CBC2297D25400F45979 /* FoodSubMaterialTableViewCell.swift in Sources */,
+				47025BCA22B8DB9600EA74C9 /* MyPageLoggedInView.swift in Sources */,
 				C117AF4F229BE0AD004FC486 /* SplashViewController.swift in Sources */,
 				42B47C612295496E00F45979 /* FirebaseTestVC.swift in Sources */,
 				42D0080B2294269A0099715E /* StretchyHeaderLayout.swift in Sources */,

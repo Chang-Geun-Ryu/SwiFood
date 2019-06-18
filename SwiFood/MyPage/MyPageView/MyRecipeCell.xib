@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MyRecipeCell" customModule="SwiFood" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="163"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="163"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CakeMain" translatesAutoresizingMaskIntoConstraints="NO" id="Cq8-9P-NFz">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="78B-6o-ANh"/>
+                            <constraint firstAttribute="width" constant="100" id="VmV-Xl-wKw"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="불고기 바베큐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQD-OW-Veb">
+                        <rect key="frame" x="0.0" y="108" width="100" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="ddx-jg-tmL"/>
+                            <constraint firstAttribute="width" constant="100" id="foJ-00-OHD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftz-EP-DlD">
+                        <rect key="frame" x="0.0" y="130" width="44" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="w6Y-Qw-CKo"/>
+                            <constraint firstAttribute="width" constant="44" id="yDj-2f-Afx"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal" title="나만보기"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ftz-EP-DlD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8Sk-I7-DaG"/>
+                <constraint firstAttribute="trailing" secondItem="Cq8-9P-NFz" secondAttribute="trailing" id="HWH-XF-arY"/>
+                <constraint firstAttribute="bottom" secondItem="ftz-EP-DlD" secondAttribute="bottom" constant="9" id="Ipj-e2-Bke"/>
+                <constraint firstItem="ftz-EP-DlD" firstAttribute="top" secondItem="iQD-OW-Veb" secondAttribute="bottom" constant="6" id="Kgf-b0-0T7"/>
+                <constraint firstItem="Cq8-9P-NFz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PEO-W2-Ium"/>
+                <constraint firstItem="Cq8-9P-NFz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="X6X-mi-qg5"/>
+                <constraint firstAttribute="trailing" secondItem="iQD-OW-Veb" secondAttribute="trailing" id="ikh-zE-qZo"/>
+                <constraint firstItem="iQD-OW-Veb" firstAttribute="top" secondItem="Cq8-9P-NFz" secondAttribute="bottom" constant="8" id="mH2-ph-kI7"/>
+                <constraint firstItem="iQD-OW-Veb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="t50-2C-tE4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="100" height="234"/>
+            <connections>
+                <outlet property="justForMeButton" destination="ftz-EP-DlD" id="AiV-Cz-aRc"/>
+                <outlet property="myRecipeImageView" destination="Cq8-9P-NFz" id="IOt-HF-lhx"/>
+                <outlet property="myRecipeTitleLabel" destination="iQD-OW-Veb" id="kbP-Po-noh"/>
+            </connections>
+            <point key="canvasLocation" x="169.56521739130437" y="205.24553571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="CakeMain" width="886" height="773"/>
+    </resources>
+</document>
