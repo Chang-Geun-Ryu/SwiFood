@@ -41,6 +41,8 @@
 		612FBAC622AE50AA0076AD1A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612FBAC522AE50AA0076AD1A /* Extension.swift */; };
 		612FBAC822AE50CC0076AD1A /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612FBAC722AE50CC0076AD1A /* MyPageViewController.swift */; };
 		612FBAD022AE53110076AD1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612FBACF22AE53110076AD1A /* LoginViewController.swift */; };
+		61488D8F22B7D7CF000F9E7E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61488D8E22B7D7CF000F9E7E /* SignUpViewController.swift */; };
+		61488D9122B7EE17000F9E7E /* SignUpFieldCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61488D9022B7EE17000F9E7E /* SignUpFieldCollectionViewCell.swift */; };
 		C117AF4F229BE0AD004FC486 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C117AF4E229BE0AD004FC486 /* SplashViewController.swift */; };
 		C1757A5B229D4E6400A20869 /* InputCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1757A59229D4E6400A20869 /* InputCommentView.swift */; };
 		C1757A5C229D4E6400A20869 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1757A5A229D4E6400A20869 /* CommentViewController.swift */; };
@@ -83,6 +85,8 @@
 		612FBAC522AE50AA0076AD1A /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		612FBAC722AE50CC0076AD1A /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		612FBACF22AE53110076AD1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		61488D8E22B7D7CF000F9E7E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		61488D9022B7EE17000F9E7E /* SignUpFieldCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldCollectionViewCell.swift; sourceTree = "<group>"; };
 		6C87F60EFB5CA7D9961D5F26 /* Pods-SwiFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiFood.debug.xcconfig"; path = "Target Support Files/Pods-SwiFood/Pods-SwiFood.debug.xcconfig"; sourceTree = "<group>"; };
 		7BA3ED43897DFE2048F9BF9D /* Pods-SwiFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiFood.release.xcconfig"; path = "Target Support Files/Pods-SwiFood/Pods-SwiFood.release.xcconfig"; sourceTree = "<group>"; };
 		C117AF4E229BE0AD004FC486 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 		42D007E02293C3540099715E /* SwiFood */ = {
 			isa = PBXGroup;
 			children = (
+				61488D8D22B7D7A9000F9E7E /* MyPage */,
 				42D0080D229509270099715E /* Heaji's codes */,
 				42D00803229418CB0099715E /* Ryu's codes */,
 				42B47C9C2296CD6900F45979 /* AppDelegate.swift */,
@@ -162,8 +167,6 @@
 				42D007ED2293C3550099715E /* Info.plist */,
 				42D007EA2293C3550099715E /* LaunchScreen.storyboard */,
 				42B47C5E229545BF00F45979 /* GoogleService-Info.plist */,
-				612FBAC722AE50CC0076AD1A /* MyPageViewController.swift */,
-				612FBACF22AE53110076AD1A /* LoginViewController.swift */,
 				612FBAC522AE50AA0076AD1A /* Extension.swift */,
 			);
 			path = SwiFood;
@@ -195,6 +198,17 @@
 				C117AF4E229BE0AD004FC486 /* SplashViewController.swift */,
 			);
 			path = "Heaji's codes";
+			sourceTree = "<group>";
+		};
+		61488D8D22B7D7A9000F9E7E /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				612FBAC722AE50CC0076AD1A /* MyPageViewController.swift */,
+				612FBACF22AE53110076AD1A /* LoginViewController.swift */,
+				61488D8E22B7D7CF000F9E7E /* SignUpViewController.swift */,
+				61488D9022B7EE17000F9E7E /* SignUpFieldCollectionViewCell.swift */,
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 		AFAFB9975A7265967BE15865 /* Frameworks */ = {
@@ -351,6 +365,7 @@
 				42B47CBA2297D25400F45979 /* FoodIntroductionTableViewCell.swift in Sources */,
 				42B47CB52297D25400F45979 /* FoodMaterialTitleTableViewCell.swift in Sources */,
 				42B47CBF2297D25400F45979 /* FoodImageTableViewCell.swift in Sources */,
+				61488D8F22B7D7CF000F9E7E /* SignUpViewController.swift in Sources */,
 				42B47CB62297D25400F45979 /* CommentTableViewCell.swift in Sources */,
 				42B47C632296202800F45979 /* FirebaseOperating.swift in Sources */,
 				42D00809229421F60099715E /* Extensions+UIView.swift in Sources */,
@@ -371,6 +386,7 @@
 				612FBAD022AE53110076AD1A /* LoginViewController.swift in Sources */,
 				4227A64B22AE69DA00BDB6D5 /* UserInfo.swift in Sources */,
 				4227A64922ADD7F700BDB6D5 /* RatingStarView.swift in Sources */,
+				61488D9122B7EE17000F9E7E /* SignUpFieldCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

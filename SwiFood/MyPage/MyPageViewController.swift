@@ -32,6 +32,13 @@ class MyPageViewController: UIViewController {
         
         return button
     }()
+    
+    let signUpButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("회원가입", for: .normal)
+        
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +47,10 @@ class MyPageViewController: UIViewController {
             view.addSubview(loginButton)
             loginButton.addTarget(self, action: #selector(signIn(_:)), for: .touchUpInside)
             loginButton.layout.centerY().centerX()
+            
+            view.addSubview(signUpButton)
+            signUpButton.addTarget(self, action: #selector(signUp(_:)), for: .touchUpInside)
+            signUpButton.layout.centerY(equalTo: loginButton.bottomAnchor, constant: 30).centerX()
         } else {
             view.addSubview(logoutButton)
             logoutButton.addTarget(self, action: #selector(signOut(_:)), for: .touchUpInside)
@@ -59,8 +70,14 @@ class MyPageViewController: UIViewController {
             view.addSubview(loginButton)
             loginButton.addTarget(self, action: #selector(signIn(_:)), for: .touchUpInside)
             loginButton.layout.centerY().centerX()
+            
+            view.addSubview(signUpButton)
+            signUpButton.addTarget(self, action: #selector(signUp(_:)), for: .touchUpInside)
+            signUpButton.layout.centerY(equalTo: loginButton.bottomAnchor, constant: 30).centerX()
+            
             logoutButton.isHidden = true
             loginButton.isHidden = false
+            signUpButton.isHidden = false
         } else {
             label.text = "로그인 중입니다."
             view.addSubview(logoutButton)
@@ -68,6 +85,7 @@ class MyPageViewController: UIViewController {
             logoutButton.layout.centerY().centerX()
             logoutButton.isHidden = false
             loginButton.isHidden = true
+            signUpButton.isHidden = true
         }
     }
     
@@ -88,6 +106,11 @@ class MyPageViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
         // show the alert
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc private func signUp(_ sender: UIButton) {
+        let signUpVC = SignUpViewController()
+        present(signUpVC, animated: true)
     }
     
     @objc private func signOut(_ sender: UIButton) {
