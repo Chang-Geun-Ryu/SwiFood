@@ -15,6 +15,14 @@ final class FireBaseOperating {
   
   static let Share = FireBaseOperating()
   
+  let date = Date()
+  
+  var downloadCount : Int = 0 {
+    didSet {
+      print("Count: \(downloadCount), dateNow: \(date.timeIntervalSinceNow)")
+    }
+  }
+  
   var ref: DatabaseReference!
   var databaseHandle: DatabaseHandle?
   
@@ -111,9 +119,24 @@ final class FireBaseOperating {
                     info: info ?? "")
     
     CollVC.food.list.append(food)
-    self.downloadImage(name: iconImage ?? "")
-    self.downloadImage(name: meterialImage?[0] ?? "")
-    self.downloadImage(name: meterialImage?[1] ?? "")
+    
+    if let iconImage = iconImage {
+      // downloading (+) count
+      downloadCount += 1
+      self.downloadImage(name: iconImage)
+    }
+    if let meterialimage = meterialImage?[0] {
+      // downloading (+) count
+      print(meterialimage)
+      downloadCount += 1
+      self.downloadImage(name: meterialimage)
+    }
+    if let meterialImage = meterialImage?[1] {
+      // downloading (+) count
+      print(meterialImage)
+      downloadCount += 1
+      self.downloadImage(name: meterialImage)
+    }
   }
   
   func downloadImage(name: String) {
@@ -126,14 +149,18 @@ final class FireBaseOperating {
       if let error = error {
         print("\n /////////////// downloadImage error: ", error.localizedDescription)
       } else {
-        CollVC.food.images.updateValue( UIImage(data: data!), forKey: name)
+        
+        guard let data = data else { return print("downloadImage: no data")}
+        CollVC.food.images.updateValue( UIImage(data: data), forKey: name)
+        
+        // downloading (-) count
+        self.downloadCount -= 1
         NotificationCenter.default.post(name: .reload, object: nil)
       }
     }
     
     print("\n ================= progress ====================== \n")
     downloadTask.observe(.progress) { snapshot in
-//      print("\(name)  fileTotalCount progress : \(snapshot.progress?.completedUnitCount)")
       print("\(name)  Fraction completed : \(snapshot.progress?.fractionCompleted)")
     }
   }
