@@ -11,52 +11,52 @@ import FirebaseAuth
 import GoogleSignIn
 
 class MyPageViewController: UIViewController {
-    
+  
     let label: UILabel = {
         let label = UILabel()
         label.text = "로그인상태"
-        
         return label
     }()
     
     let loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("로그인", for: .normal)
-        
         return button
     }()
     
     let logoutButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("로그아웃", for: .normal)
-        
         return button
     }()
     
     let signUpButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("회원가입", for: .normal)
-        
         return button
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if Auth.auth().currentUser == nil {
-            view.addSubview(loginButton)
-            loginButton.addTarget(self, action: #selector(signIn(_:)), for: .touchUpInside)
-            loginButton.layout.centerY().centerX()
-            
-            view.addSubview(signUpButton)
-            signUpButton.addTarget(self, action: #selector(signUp(_:)), for: .touchUpInside)
-            signUpButton.layout.centerY(equalTo: loginButton.bottomAnchor, constant: 30).centerX()
-        } else {
-            view.addSubview(logoutButton)
-            logoutButton.addTarget(self, action: #selector(signOut(_:)), for: .touchUpInside)
-            logoutButton.layout.centerY().centerX()
-        }
-        
+//        if Auth.auth().currentUser == nil {
+//            view.addSubview(loginButton)
+//            loginButton.addTarget(self, action: #selector(signIn(_:)), for: .touchUpInside)
+//            loginButton.layout.centerY().centerX()
+//
+//            view.addSubview(signUpButton)
+//            signUpButton.addTarget(self, action: #selector(signUp(_:)), for: .touchUpInside)
+//            signUpButton.layout.centerY(equalTo: loginButton.bottomAnchor, constant: 30).centerX()
+//        } else {
+//            view.addSubview(logoutButton)
+//            logoutButton.addTarget(self, action: #selector(signOut(_:)), for: .touchUpInside)
+//            logoutButton.layout.centerY().centerX()
+//
+//
+//            let myLoggedInView = MyPageLoggedInView(frame: self.view.frame)
+//            self.view.addSubview(myLoggedInView)
+//        }
+      
         view.addSubview(label)
         label.layout.centerX().top()
     }
@@ -86,6 +86,10 @@ class MyPageViewController: UIViewController {
             logoutButton.isHidden = false
             loginButton.isHidden = true
             signUpButton.isHidden = true
+          
+            let myLoggedInView = Bundle.main.loadNibNamed("MyPageLoggedInView", owner: self, options: nil)?.first as! MyPageLoggedInView
+            self.view.addSubview(myLoggedInView)
+          
         }
     }
     
