@@ -129,7 +129,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
     }
     
     /// AppDelegate 가져오기
-    ///
+    ////
     /// - Returns: AppDelegate
     func getAppDelegate() -> AppDelegate!{
         return UIApplication.shared.delegate as! AppDelegate
