@@ -42,6 +42,7 @@
 		612FBAC822AE50CC0076AD1A /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612FBAC722AE50CC0076AD1A /* MyPageViewController.swift */; };
 		612FBAD022AE53110076AD1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612FBACF22AE53110076AD1A /* LoginViewController.swift */; };
 		61488D8F22B7D7CF000F9E7E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61488D8E22B7D7CF000F9E7E /* SignUpViewController.swift */; };
+		61488DC022BB65FF000F9E7E /* EmailSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61488DBF22BB65FF000F9E7E /* EmailSignInViewController.swift */; };
 		C117AF4F229BE0AD004FC486 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C117AF4E229BE0AD004FC486 /* SplashViewController.swift */; };
 		C1757A5B229D4E6400A20869 /* InputCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1757A59229D4E6400A20869 /* InputCommentView.swift */; };
 		C1757A5C229D4E6400A20869 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1757A5A229D4E6400A20869 /* CommentViewController.swift */; };
@@ -85,6 +86,7 @@
 		612FBAC722AE50CC0076AD1A /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		612FBACF22AE53110076AD1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		61488D8E22B7D7CF000F9E7E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		61488DBF22BB65FF000F9E7E /* EmailSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignInViewController.swift; sourceTree = "<group>"; };
 		6C87F60EFB5CA7D9961D5F26 /* Pods-SwiFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiFood.debug.xcconfig"; path = "Target Support Files/Pods-SwiFood/Pods-SwiFood.debug.xcconfig"; sourceTree = "<group>"; };
 		7BA3ED43897DFE2048F9BF9D /* Pods-SwiFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiFood.release.xcconfig"; path = "Target Support Files/Pods-SwiFood/Pods-SwiFood.release.xcconfig"; sourceTree = "<group>"; };
 		C117AF4E229BE0AD004FC486 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				612FBAC722AE50CC0076AD1A /* MyPageViewController.swift */,
 				612FBACF22AE53110076AD1A /* LoginViewController.swift */,
 				61488D8E22B7D7CF000F9E7E /* SignUpViewController.swift */,
+				61488DBF22BB65FF000F9E7E /* EmailSignInViewController.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				42D0080B2294269A0099715E /* StretchyHeaderLayout.swift in Sources */,
 				42D0080722941CD60099715E /* CollectionHeaderView.swift in Sources */,
 				612FBAD022AE53110076AD1A /* LoginViewController.swift in Sources */,
+				61488DC022BB65FF000F9E7E /* EmailSignInViewController.swift in Sources */,
 				4227A64B22AE69DA00BDB6D5 /* UserInfo.swift in Sources */,
 				4227A64922ADD7F700BDB6D5 /* RatingStarView.swift in Sources */,
 			);

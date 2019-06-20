@@ -43,6 +43,22 @@ class SignUpViewController: UIViewController {
         return button
     }()
     
+    let userName: UITextField = {
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.placeholder = "이름"
+        tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
+        tf.borderStyle = .roundedRect
+        tf.font = UIFont.systemFont(ofSize: 14)
+        tf.leftViewMode = UITextField.ViewMode.always
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        let image = #imageLiteral(resourceName: "user")
+        imageView.image = image
+        tf.leftView = imageView
+        
+        return tf
+    }()
+    
     let nickName: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
@@ -77,7 +93,7 @@ class SignUpViewController: UIViewController {
     
     let passwordTextField: UITextField = {
         let tf = UITextField()
-        tf.placeholder = "Password"
+        tf.placeholder = "비밀번호를 입력해주세요(6자리 이상)"
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.isSecureTextEntry = true
@@ -94,7 +110,7 @@ class SignUpViewController: UIViewController {
     
     let confimPasswordUserTextField: UITextField = {
         let tf = UITextField()
-        tf.placeholder = "Password"
+        tf.placeholder = "비밀번호를 확인해주세요(6자리 이상)"
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.isSecureTextEntry = true
@@ -165,7 +181,7 @@ class SignUpViewController: UIViewController {
     
     func configureViewComponents() {
         
-        let stackView = UIStackView(arrangedSubviews: [nickName, emailTextField, passwordTextField, confimPasswordUserTextField])
+        let stackView = UIStackView(arrangedSubviews: [userName, nickName, emailTextField, passwordTextField, confimPasswordUserTextField])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 20
@@ -196,6 +212,7 @@ class SignUpViewController: UIViewController {
     @objc func formValidation() {
         
         guard
+            userName.hasText,
             nickName.hasText,
             emailTextField.hasText,
             passwordTextField.hasText,

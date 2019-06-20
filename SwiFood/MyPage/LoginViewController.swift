@@ -52,7 +52,10 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
         view.addSubview(googleSignInButton)
         view.addSubview(emailSignInButton)
         view.addSubview(dismissButton)
+        
+        // Google Signin
         GIDSignIn.sharedInstance().uiDelegate = self
+
         GIDSignIn.sharedInstance().delegate = self
         configure()
     
@@ -101,11 +104,22 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
     }
     
     @objc private func dismissButton(_ sender: UIButton) {
-        dismiss(animated: true)
+        if googleSignInButton.isHidden == true {
+            googleSignInButton.isHidden = false
+        } else {
+            dismiss(animated: true)
+        }
     }
     
     @objc private func emailSignIn(_ sender: UIButton) {
-        
+        if googleSignInButton.isHidden == true {
+            print(1111)
+        } else {
+            googleSignInButton.isHidden = true
+            UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0, options: .curveEaseOut, animations: {
+                self.emailSignInButton.layout.centerX().bottom(equalTo: self.view.bottomAnchor, constant: -150)
+            }, completion: nil)
+        }
     }
     
     @objc private func googleSignIn(_ sender: GIDSignInButton) {
@@ -114,14 +128,35 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
         
     }
     
+    /// AppDelegate 가져오기
+    ///
+    /// - Returns: AppDelegate
+    func getAppDelegate() -> AppDelegate!{
+        return UIApplication.shared.delegate as! AppDelegate
+    }
     
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+        
+        if let err = error {
+            print("LoginViewController:error = \(err)")
+            return
+        }
         
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                        accessToken: authentication.accessToken)
-        Auth.auth().signIn(with: credential) { (result, error) in
-            print("result: ", result)
+        Auth.auth().signIn(with: credential) { (user, error) in
+            // ...
+            if let err = error {
+                print("LoginViewController:error = \(err)")
+                return
+            }
+            
+//            if let appDelegate = self.getAppDelegate(){
+//                let info = UserInfo(name: user?.nick, email: user?.email, id: user?.email, password: "", joinAddress: "google")
+//                appDelegate.addUserProfile(uid: (user?.uid)!, userInfo: info)
+//                self.gotoMainViewController(user: info)
+//            }
             
             if let user = user{
                 let tabbar = UIApplication.shared.keyWindow?.rootViewController as? UITabBarController
@@ -129,9 +164,8 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
                 self.dismiss(animated: true)
                 return
             }
-            print("GIDSign faild")
         }
-        }
+    }
         
     
 }
