@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RecipeMeterialsCell" customModule="SwiFood" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="443" height="292"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="443" height="292"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q6k-cJ-zjH">
+                        <rect key="frame" x="0.0" y="101" width="443" height="163"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tableView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvr-Ew-CyD">
+                        <rect key="frame" x="389" y="70" width="34" height="31"/>
+                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Add">
+                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="titleShadowColor" red="0.93840084420000003" green="0.94769194160000003" blue="0.94769194160000003" alpha="0.81934931509999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="addBtnDidTap:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Dtr-dM-IPi"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="【 요리 재료를 입력해주세요. 】" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcB-yd-yeo">
+                        <rect key="frame" x="87.5" y="70" width="268.5" height="31"/>
+                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="21"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mou-zU-L9f">
+                        <rect key="frame" x="206.5" y="188" width="30" height="34"/>
+                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="  ">
+                            <color key="titleColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="mou-zU-L9f" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="Eou-qz-aPP"/>
+                <constraint firstItem="TcB-yd-yeo" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="70" id="GBA-ON-3gD"/>
+                <constraint firstItem="q6k-cJ-zjH" firstAttribute="top" secondItem="TcB-yd-yeo" secondAttribute="bottom" id="T21-EZ-SPr"/>
+                <constraint firstItem="q6k-cJ-zjH" firstAttribute="top" secondItem="tvr-Ew-CyD" secondAttribute="bottom" id="Wpe-Mr-REv"/>
+                <constraint firstItem="tvr-Ew-CyD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="70" id="XWh-iR-Jqc"/>
+                <constraint firstItem="q6k-cJ-zjH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YnO-pD-NWE"/>
+                <constraint firstAttribute="trailing" secondItem="tvr-Ew-CyD" secondAttribute="trailing" constant="20" id="ea1-8F-YvS"/>
+                <constraint firstItem="TcB-yd-yeo" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="fae-er-fx0"/>
+                <constraint firstItem="mou-zU-L9f" firstAttribute="top" secondItem="q6k-cJ-zjH" secondAttribute="bottom" constant="40" id="l0M-dP-0du"/>
+                <constraint firstAttribute="bottom" secondItem="mou-zU-L9f" secondAttribute="bottom" constant="70" id="utc-Ng-q9r"/>
+                <constraint firstAttribute="trailing" secondItem="q6k-cJ-zjH" secondAttribute="trailing" id="z4S-Pv-vr4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="443" height="292"/>
+            <connections>
+                <outlet property="tableView" destination="q6k-cJ-zjH" id="4Ev-H3-yKP"/>
+            </connections>
+            <point key="canvasLocation" x="126.81159420289856" y="114.50892857142857"/>
+        </collectionViewCell>
+    </objects>
+</document>

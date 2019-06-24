@@ -18,16 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main" translatesAutoresizingMaskIntoConstraints="NO" id="k4N-HM-D7k">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="changeLuanchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="k4N-HM-D7k">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.99193829298019409" green="0.86966409166896486" blue="0.89910443086566405" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="k4N-HM-D7k" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="0ap-ia-GuJ"/>
-                            <constraint firstAttribute="bottom" secondItem="k4N-HM-D7k" secondAttribute="bottom" id="8ed-K5-mRT"/>
-                            <constraint firstItem="k4N-HM-D7k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WMo-rS-yNR"/>
-                            <constraint firstItem="k4N-HM-D7k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mK2-ck-uyN"/>
+                            <constraint firstAttribute="bottom" secondItem="k4N-HM-D7k" secondAttribute="bottom" id="2kD-xx-AH6"/>
+                            <constraint firstItem="k4N-HM-D7k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EAQ-nk-43q"/>
+                            <constraint firstItem="k4N-HM-D7k" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ZDI-GO-w6E"/>
+                            <constraint firstItem="k4N-HM-D7k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lCh-gO-4wY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,6 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="main" width="564" height="847"/>
+        <image name="changeLuanchScreen" width="280" height="420"/>
     </resources>
 </document>

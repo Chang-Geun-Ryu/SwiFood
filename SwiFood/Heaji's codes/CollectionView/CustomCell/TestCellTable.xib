@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="78" id="KGk-i7-Jjw" customClass="TestCellTable" customModule="SwiFood" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="416" height="78"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="416" height="77.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="중량" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1EY-61-2NX">
+                        <rect key="frame" x="212" y="0.0" width="150" height="77.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="VOz-vE-FFM"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="textfieldEditingChanged:" destination="KGk-i7-Jjw" eventType="editingDidEnd" id="2Xt-X5-px1"/>
+                        </connections>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owX-jb-iTe">
+                        <rect key="frame" x="372" y="0.0" width="19" height="77.5"/>
+                        <color key="tintColor" red="1" green="0.28167157799367259" blue="0.1060301451762149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" image="substract"/>
+                        <connections>
+                            <action selector="minusBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Jgp-bb-Vg3"/>
+                        </connections>
+                    </button>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="재료" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="17W-xo-uYa">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="77.5"/>
+                        <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="textfieldEditingChanged:" destination="KGk-i7-Jjw" eventType="editingChanged" id="Wi2-jd-xHq"/>
+                        </connections>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1EY-61-2NX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="4gH-C9-4bp"/>
+                    <constraint firstItem="17W-xo-uYa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9WW-Sj-pL1"/>
+                    <constraint firstAttribute="bottom" secondItem="17W-xo-uYa" secondAttribute="bottom" id="Oue-hf-PbC"/>
+                    <constraint firstAttribute="bottom" secondItem="1EY-61-2NX" secondAttribute="bottom" id="QRI-NG-Vce"/>
+                    <constraint firstAttribute="trailing" secondItem="owX-jb-iTe" secondAttribute="trailing" constant="25" id="RnV-iJ-Ep9"/>
+                    <constraint firstItem="1EY-61-2NX" firstAttribute="width" secondItem="17W-xo-uYa" secondAttribute="width" id="ZSK-6o-Drw"/>
+                    <constraint firstItem="owX-jb-iTe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="al5-6r-k0n"/>
+                    <constraint firstItem="17W-xo-uYa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kvr-Fm-wjZ"/>
+                    <constraint firstItem="owX-jb-iTe" firstAttribute="leading" secondItem="1EY-61-2NX" secondAttribute="trailing" constant="10" id="vb6-Uz-DRl"/>
+                    <constraint firstAttribute="bottom" secondItem="owX-jb-iTe" secondAttribute="bottom" id="zvw-FR-H4r"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="amountTextfield" destination="1EY-61-2NX" id="YN4-lv-isK"/>
+                <outlet property="meterialsTextfield" destination="17W-xo-uYa" id="3Ao-3z-TK9"/>
+            </connections>
+            <point key="canvasLocation" x="117.39130434782609" y="46.875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="substract" width="19" height="19"/>
+    </resources>
+</document>

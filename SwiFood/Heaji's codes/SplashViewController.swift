@@ -13,7 +13,7 @@ class SplashViewController: UIViewController {
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "main")
+        imageView.image = UIImage(named: "changeLuanchScreen")
         return imageView
     }()
     
@@ -33,20 +33,20 @@ class SplashViewController: UIViewController {
         print("splash")
         autolayout()
         // label의 알파를 천천히 바꾸는 거
-        UIView.animate(withDuration: 1.5) { [weak label = self.label] in
+        UIView.animate(withDuration: 0.5) { [weak label = self.label] in
             label?.alpha = 1
         }
         // 3초 뒤에 뷰 컨트롤러를 띄우는거
-        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
             let appDelegate =  UIApplication.shared.delegate as! AppDelegate
             let tapbar = UITabBarController()
             let navi = UINavigationController(rootViewController: CollVC(collectionViewLayout: StretchyHeaderLayout()))
             navi.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), tag: 0)
-            
-            let testVC = FirebaseTestVC()
-            testVC.tabBarItem = UITabBarItem(title: "Recipe", image: UIImage(named: "chef"), tag: 1)
-            tapbar.setViewControllers([navi, testVC], animated: true)
-            
+            // tabBar -> testVC 에서 바꿈 6/16
+//            let testVC = FirebaseTestVC()
+            let recipeCVC = UINavigationController(rootViewController: RecipeCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())) 
+            recipeCVC.tabBarItem = UITabBarItem(title: "Recipe", image: UIImage(named: "chef"), tag: 1)
+            tapbar.setViewControllers([navi, recipeCVC], animated: true)
             tapbar.tabBar.tintColor = .gray
             appDelegate.window?.rootViewController = tapbar
         }

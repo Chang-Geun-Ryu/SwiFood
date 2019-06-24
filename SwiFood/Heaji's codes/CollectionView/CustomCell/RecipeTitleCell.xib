@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RecipeTitleCell" customModule="SwiFood" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="561"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="363" height="561"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="caH-f0-dt2">
+                        <rect key="frame" x="30" y="163.5" width="53" height="77"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmK-uc-MzY">
+                                <rect key="frame" x="0.0" y="0.0" width="53" height="32.5"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRC-E6-4jK">
+                                <rect key="frame" x="0.0" y="54.5" width="53" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="O7D-OA-qd6">
+                        <rect key="frame" x="30" y="310.5" width="303" height="130"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="130" id="2HW-AC-Gzv"/>
+                        </constraints>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="8ee-my-k1Z">
+                        <rect key="frame" x="113" y="163.5" width="220" height="71"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OkI-C0-rBo">
+                                <rect key="frame" x="0.0" y="0.0" width="220" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qd4-gi-LOj">
+                                <rect key="frame" x="0.0" y="41" width="220" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="220" id="dZN-2J-9rs"/>
+                        </constraints>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="【 요리 이름를 입력해주세요. 】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTW-Oo-1pt">
+                        <rect key="frame" x="47.5" y="70" width="268.5" height="23.5"/>
+                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="21"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="dTW-Oo-1pt" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="5h0-Ky-Gtm"/>
+                <constraint firstItem="8ee-my-k1Z" firstAttribute="leading" secondItem="caH-f0-dt2" secondAttribute="trailing" constant="30" id="82P-UO-cnZ"/>
+                <constraint firstItem="caH-f0-dt2" firstAttribute="top" secondItem="dTW-Oo-1pt" secondAttribute="bottom" constant="70" id="EYB-ft-faW"/>
+                <constraint firstItem="O7D-OA-qd6" firstAttribute="top" secondItem="8ee-my-k1Z" secondAttribute="bottom" constant="76" id="Pp2-0q-61O"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="O7D-OA-qd6" secondAttribute="trailing" constant="30" id="Yvt-TD-K7C"/>
+                <constraint firstItem="O7D-OA-qd6" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="30" id="btA-s3-fmF"/>
+                <constraint firstItem="dTW-Oo-1pt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="70" id="dFf-Hy-hrN"/>
+                <constraint firstItem="O7D-OA-qd6" firstAttribute="top" secondItem="caH-f0-dt2" secondAttribute="bottom" constant="70" id="fVP-gF-Qfz"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="8ee-my-k1Z" secondAttribute="trailing" constant="30" id="lgk-ur-6YG"/>
+                <constraint firstItem="caH-f0-dt2" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="30" id="n48-q0-xvB"/>
+                <constraint firstItem="8ee-my-k1Z" firstAttribute="top" secondItem="dTW-Oo-1pt" secondAttribute="bottom" constant="70" id="s20-Sm-1S9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="363" height="561"/>
+            <connections>
+                <outlet property="levelLabel" destination="XRC-E6-4jK" id="m8f-UP-j3u"/>
+                <outlet property="levelTF" destination="qd4-gi-LOj" id="HCN-bc-M3O"/>
+                <outlet property="textView" destination="O7D-OA-qd6" id="euk-AU-F0O"/>
+                <outlet property="titleLabel" destination="PmK-uc-MzY" id="8AB-oT-7r1"/>
+                <outlet property="titleTF" destination="OkI-C0-rBo" id="fnk-ow-U15"/>
+            </connections>
+            <point key="canvasLocation" x="-225.36231884057972" y="182.47767857142856"/>
+        </collectionViewCell>
+    </objects>
+</document>

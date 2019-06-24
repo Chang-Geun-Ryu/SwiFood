@@ -65,8 +65,9 @@
                             <constraint firstAttribute="width" constant="30" id="vCs-pV-mpZ"/>
                         </constraints>
                         <state key="normal" image="tag5"/>
+                        <state key="selected" image="tag6"/>
                         <connections>
-                            <action selector="tagDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YiX-Ww-RcK"/>
+                            <action selector="tagDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ItD-un-Qo9"/>
                         </connections>
                     </button>
                 </subviews>
@@ -100,5 +101,6 @@
     <resources>
         <image name="chat" width="64" height="64"/>
         <image name="tag5" width="64" height="64"/>
+        <image name="tag6" width="64" height="64"/>
     </resources>
 </document>

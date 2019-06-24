@@ -38,9 +38,7 @@ class FoodIntroductionTableViewCell: UITableViewCell {
         print("tagDidTap")
         NotificationCenter.default.post(name: NSNotification.Name("tagDidTap"), object: nil , userInfo: [ "cell" : self])
         
-        
+         tagBtn.isSelected.toggle()
+
     }
-    
-    
-    
 }
